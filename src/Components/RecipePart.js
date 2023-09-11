@@ -9,7 +9,7 @@ const recipePart = () => {
     {
       id: 2,
       title: "Chicken Meatballs with Cream Cheese",
-      image: "/Assets/meatballs.png",
+      image: "/Assets/cheeseBurger.png",
     },
     {
         id: 3,
@@ -19,7 +19,7 @@ const recipePart = () => {
       {
         id: 4,
         title: "Chicken Meatballs with Cream Cheese",
-        image: "/Assets/meatballs.png",
+        image: "/Assets/cheeseBurger.png",
       },
       {
         id: 5,
@@ -30,7 +30,7 @@ const recipePart = () => {
         id: 6,
         title: "Chicken Meatballs with Cream Cheese",
         image: "/Assets/meatballs.png",
-        
+
       },
   ];
 

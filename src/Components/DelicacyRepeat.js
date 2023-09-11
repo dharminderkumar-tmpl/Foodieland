@@ -28,7 +28,7 @@ const DelicacyRepeat = () => {
             <img src={"/Assets/mixedSalad.png"} alt="baked chicken" />
           
             <img src={"/Assets/flower.png"} id="flower"alt="baked chicken" />
-            <img src={"/Assets/photoPlate.png"} alt="baked chicken" />
+            <img src={"/Assets/Photoplate.png"} alt="baked chicken" />
             
 
             </div>
