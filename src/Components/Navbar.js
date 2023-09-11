@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link } from 'react-router-dom';
+import { NavLink ,Link} from 'react-router-dom';
 const openInNewTab=(url)=>{
   window.open(url, '_blank','noreferrer');
 }
@@ -11,11 +11,11 @@ function Navbar() {
       </div>
       <div className='mid'>
         <ul className='navItems'>
-            <Link to={"/"}>Home</Link>
-            <Link to={'/Recipe'}>Recipe</Link>
-            <Link to={'/Blog'}>Blog</Link>
-            <Link to={'/Contact'}>Contact</Link>
-            <Link to={'/AboutUs'}>About Us</Link>
+            <nav id='homebtn'> <NavLink to={"/"}>Home</NavLink></nav>
+            <nav id='recipebtn'><NavLink to={'/Recipe'}>Recipe</NavLink></nav>
+            <nav id='blogbtn'><NavLink to={'/Blog'}>Blog</NavLink></nav>
+            <nav id='contactbtn'><NavLink to={'/Contact'}>Contact</NavLink></nav>
+            {/* <nav id='aboutusbtn'><NavLink to={'/AboutUs'}>About Us</NavLink></nav> */}
         </ul>
       </div>
 

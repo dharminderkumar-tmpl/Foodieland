@@ -14,14 +14,63 @@ body{
   justify-content: space-evenly;
   align-items: center;
   margin-top: 10px;
-
-  @media screen and (max-width:660px){
-  flex-wrap: wrap;
-  
-
-  }
+  border-bottom: 2px solid rgba(0, 0, 0, 0.10);;
 }
+@media only screen and (min-width: 200px )and (max-width:767px){
+  .navbar.mid ul {
+    list-style: none;
+    font-family: 'Inter', sans-serif;
+    font-weight: 500px;
+    font-size: 13px;
+    line-height: 16.36px;
+    text-shadow: 1px 3px 3.5px rgba(0,0,0,0.55);
+}
+.navbar .mid .navItems {
+  display: flex;
+  align-self: center;
+  gap: 15px;
+  
+} 
+.navbar {
+  width: 100vw;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-top: 10px;
+  flex-direction: column;
+}
+.navbar .mid{
+  margin-top: 10px;;
+}
+.rightSide{
+    display: flex;
+    gap: 30px;
+    margin-top: 19px;
 
+}
+}
+@media screen and (max-width: 768px){
+  .mid .navItems {
+    display: flex;
+    align-self: center;
+    gap: 45px;
+}
+}
+#homebtn a.active{
+  border-bottom:2px solid #000;
+}
+#recipebtn a.active{
+  border-bottom:2px solid #000;
+}
+#blogbtn a.active{
+  border-bottom:2px solid #000;
+}
+#contactbtn a.active{
+  border-bottom:2px solid #000;
+}
+#aboutusbtn a.active{
+  border-bottom:2px solid #000;
+}
 .leftSide img{
   -webkit-filter: drop-shadow(1px 3px 4px #222);
   filter: drop-shadow(0 0 16px #222);
@@ -163,6 +212,7 @@ body{
       border-radius: 25px; 
       padding: 20px; 
   }
+  
 
   .leftHeroPage h1 {
       font-size: 1.5rem;
@@ -189,30 +239,8 @@ body{
   margin-top: 2.5rem;
 }
 
-.Img1{
-  border-radius: 30px;
-background: linear-gradient(180deg, rgba(112, 130, 70, 0.00) 0%, rgba(112, 130, 70, 0.10) 100%);
-
-}
-.Img2{
-  border-radius: 30px;
-  background: linear-gradient(180deg, rgba(108, 198, 63, 0.00) 0%, rgba(108, 198, 63, 0.10) 100%);
-
-}
-.Img3{
-  border-radius: 30px;
-background: linear-gradient(180deg, rgba(204, 38, 27, 0.00) 0%, rgba(204, 38, 27, 0.10) 100%);
-}
-.Img4{
-  border-radius: 30px;
-  background: linear-gradient(180deg, rgba(240, 158, 0, 0.00) 0%, rgba(240, 158, 0, 0.10) 100%);
-}
-.Img5{
-  border-radius: 30px;
-background: linear-gradient(180deg, rgba(0, 0, 0, 0.00) 0%, rgba(0, 0, 0, 0.05) 100%);
-}
-.Img6{
-  border-radius: 30px;
+.card img{
+  border-radius: 20px;
   background: linear-gradient(180deg, rgba(0, 0, 0, 0.00) 0%, rgba(0, 0, 0, 0.05) 100%);
 
 }
@@ -276,17 +304,16 @@ flex-wrap: wrap;
 /* recipePart */
 
 .recipeCards {
-  margin: auto;
+  padding: 0 80px;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
+  justify-content: space-between;
   /* border: 1px solid red; */
 }
 .card{
-flex-basis: 30%;
 margin: 10px 0;
 text-align: center;
-padding: 20px 0px;
+padding: 0px 0px;
 border-radius: 30px;
 background: linear-gradient(180deg, rgba(231, 249, 253, 0.00) 0%, #E7F9FD 100%);
 box-shadow: 0px 0px 10px 3px lightblue;
@@ -1061,9 +1088,26 @@ letter-spacing: -0.32px;
 }
 .blogName h1{
   text-align: center;
+  margin-top: 30px;
+  color: #000;
+text-align: center;
+font-family: Inter;
+font-size: 64px;
+font-style: normal;
+font-weight: 600;
+line-height: normal;
+letter-spacing: -2.56px;
 }
 .blogName p{
   text-align: center;
+  margin-top: 20px;
+  color: rgba(0, 0, 0, 0.60);
+text-align: center;
+font-family: Inter;
+font-size: 16px;
+font-style: normal;
+font-weight: 400;
+line-height: 28px; /* 175% */
 }
 .blogName .search-container{
   display: flex;
@@ -1071,7 +1115,7 @@ letter-spacing: -0.32px;
   border-radius: 24px;
   border: 1px solid rgba(0, 0, 0, 0.10);
   background: #FFF;
-  width: 75%;
+  width: 50%;
  
 }
 .blogName .search-container .border-search-container{
@@ -1104,4 +1148,357 @@ letter-spacing: -0.32px;
 .mainsearch{
   display: flex;
   justify-content: center;
+}
+.mainsectionblogpage {
+  display: flex;
+  width: 85%;
+  justify-content: center;
+  margin-left: 77px;
+  margin-top: 37px;
+}
+.mainsectionblogs{
+  display: flex;
+  justify-content: center;
+  margin-top: 25px;
+}
+.mainsectionblogs .imageblog img{
+  width: 100%;
+  border-radius: 20px;
+}
+.textblog{
+  
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+}
+.textblog h2{
+  color: #000;
+font-family: Inter;
+font-size: 24px;
+font-style: normal;
+font-weight: 600;
+line-height: normal;
+letter-spacing: -0.96px;
+}
+.textblog p{
+  color: rgba(0, 0, 0, 0.60);
+font-family: Inter;
+font-size: 16px;
+font-style: normal;
+font-weight: 400;
+line-height: 28px; /* 175% */
+}
+@media only screen and (min-width: 200px )and (max-width:767px) {
+  .blogName h1 {
+    text-align: center;
+    margin-top: 30px;
+    color: #000;
+    text-align: center;
+    font-family: Inter;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    letter-spacing: -2.56px;
+}
+    
+.blogName p {
+  text-align: center;
+  margin-top: 20px;
+  color: rgba(0, 0, 0, 0.60);
+  text-align: center;
+  font-family: Inter;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 28px;
+}
+.blogName .search-container {
+  display: flex;
+  /* justify-content: center; */
+  border-radius: 24px;
+  border: 1px solid rgba(0, 0, 0, 0.10);
+  background: #FFF;
+  width: 85%;
+}
+.mainsectionblogpage {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  justify-content: center;
+  margin-left: 7px;
+}
+.textblog h2 {
+  color: #000;
+  font-family: Inter;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  letter-spacing: -0.96px;
+}
+.textblog p {
+  color: rgba(0, 0, 0, 0.60);
+  font-family: Inter;
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 16px;
+}
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+.textblog p {
+  color: rgba(0, 0, 0, 0.60);
+  font-family: Inter;
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 21px;
+}
+.textblog h2 {
+  color: #000;
+  font-family: Inter;
+  font-size: 17px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  letter-spacing: -0.96px;
+}
+.rightRecipeDishmain {
+  display: flex;
+  gap: 33px;
+  flex-direction: column;
+  margin-top: 4px;
+}
+.rightRecipeDish {
+  display: flex;
+  flex-direction: column;
+}
+.rightRecipeDish img {
+  width: 100%;
+  height: auto;
+}
+.rightRecipeDish h2 {
+  color: #000;
+  font-family: Inter;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 28px;
+  letter-spacing: -0.8px;
+}
+.RecipeRight h1 {
+  color: #000;
+  font-family: Inter;
+  font-size: 26px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  letter-spacing: -1.28px;
+}
+}
+.pagination {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  margin-top: 25px;
+}
+.pagination a {
+  color: black;
+  float: left;
+  padding: 8px 16px;
+  text-decoration: none;
+}
+.pagination a.active {
+  background-color: #E7FAFE;;
+  color: black;
+}
+
+.pagination a:hover:not(.active) {background-color: #ddd;}
+
+
+/* Contact us page  */
+
+.inputForm {
+  /* background-color: rgba(73, 69, 69, 1); */
+  color: black;
+  margin-top: 60px;
+  font-family: poppins;
+  /* height: 70vh; */
+  padding-bottom: 80px;
+  display: flex;
+  justify-content: space-evenly;
+  /* flex-direction: column; */
+}
+.inputForm h1 {
+  display: flex;
+  justify-content: center;
+  color: #000;
+font-family: Inter;
+font-size: 64px;
+font-style: normal;
+font-weight: 600;
+line-height: normal;
+letter-spacing: -2.56px;
+  padding-bottom: 50px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: baseline;
+  
+}
+.fullName {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  font-size: large;
+}
+#firstname {
+  display: flex;
+  flex-direction: column;
+  
+}
+.imagecontact{
+  background-image: linear-gradient(to top, #E7F9FD, transparent);
+  border-radius: 25px;
+
+}
+ b{
+  color: rgba(0, 0, 0, 0.60);
+font-family: Inter;
+font-size: 12px;
+font-style: normal;
+font-weight: 500;
+line-height: 20px; /* 166.667% */
+letter-spacing: 0.96px;
+text-transform: uppercase;
+}
+#lastname {
+  display: flex;
+  flex-direction: column;
+}
+#fname {
+  /* background-color: gray; */
+  border: 0px;
+  border-radius: 10px;
+  padding: 10px;
+  border-radius: 16px;
+border: 1px solid rgba(0, 0, 0, 0.10);
+background: #FFF;
+}
+#lname {
+  /* background-color: gray; */
+  /* border: 0px;
+  border-radius: 10px; */
+  padding: 10px;
+  border-radius: 16px;
+border: 1px solid rgba(0, 0, 0, 0.10);
+background: #FFF;
+}
+#mail {
+  display: flex;
+  flex-direction: column;
+  padding: 15px 0px 10px 0px;
+}
+#textmsg {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding: 15px 0px 10px 0px;
+  
+}
+
+#email {
+  padding: 10px;
+  border: 0;
+  border-radius: 10px;
+  /* background-color: gray; */
+}
+#message {
+  padding: 60px;
+  /* background-color: gray; */
+  border: 0;
+  border-radius: 10px;
+  border-radius: 16px;
+border: 1px solid rgba(0, 0, 0, 0.10);
+}
+.Sendbutton {
+  display: flex;
+  justify-content: center;
+  margin-top: 25px;
+}
+.Sendbutton button {
+  border-radius: 16px;
+border: 1px solid rgba(0, 0, 0, 0.10);
+  color: white;
+  padding: 10px 30px 10px 30px;
+  background-color: black;
+  color: #FFF;
+text-align: center;
+font-family: Inter;
+/* font-size: 16px; */
+font-style: normal;
+font-weight: 600;
+line-height: 24px; /* 150% */
+letter-spacing: -0.32px;
+}
+
+@media only screen and (min-width: 200px )and (max-width:767px) {
+  .fullName {
+    gap: 10px;
+  }
+  
+    .inputForm {
+      /* background-color: rgba(73, 69, 69, 1); */
+      color: black;
+      margin-top: 60px;
+      font-family: poppins;
+      /* height: 70vh; */
+      padding-bottom: 80px;
+      display: flex;
+      justify-content: space-evenly;
+      flex-direction: column;
+  
+  }
+  
+  .form {
+    justify-content: center;
+    /* height: 50vh; */
+  }
+
+  #message {
+    padding: 50px;
+  }
+  #fname {
+    width: 100px;
+    padding: 5px;
+  }
+  #lname {
+    width: 100px;
+    padding: 5px;
+  }
+  #fname {
+    width: 100px;
+    padding: 5px;
+  }
+  .Sendbutton {
+    margin-bottom: 20px;
+  }
+  .inputForm h1 {
+    display: flex;
+    justify-content: center;
+    color: #000;
+    font-family: Inter;
+    font-size: 39px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    letter-spacing: -2.56px;
+    padding-bottom: 50px;
+}
 }
