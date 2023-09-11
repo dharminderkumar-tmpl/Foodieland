@@ -1,24 +1,25 @@
 import React from "react";
 
-const Hero = () => {
+const ChefPart = () => {
   return (
     <>
-    {/* <div className="autoplay"> */}
+    
         
-      <div className="Main">
-        <div className="hero-container">
-          <div className="leftHeroPage">
-            <h1>Spicy delicious chicken wings</h1>
+      <div className="Chef-main">
+        <div className="chef-container">
+          <div className="leftChefPage">
+            <h1>Everyone can be a chef in their own kitchen</h1>
             <p>
               Lorem ipsum dolor sit amet, consectetuipisicing elit, sed do eiusmod
               tempor incididunt ut labore et dolore magna aliqut enim ad minim
             </p>
+            <button>Learn More</button>
           </div>
           {/* <div className='badge'>
           <img src={badge} alt='badge' />
       </div> */}
-          <div className="rightHeroPage">
-          <img src={'/Assets/baked-chicken.png'} alt="baked chicken" />
+          <div className="rightChefPage">
+          <img src={'/Assets/chef.png'} alt="baked chicken" />
         </div>
         </div>
       </div>
@@ -28,4 +29,4 @@ const Hero = () => {
   );
 };
 
-export default Hero;
+export default ChefPart;
