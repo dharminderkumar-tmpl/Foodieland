@@ -187,43 +187,44 @@ body{
 }
 
 
-@media screen and (max-width: 768px) {
-  .Main {
-    width: 100vw;
-    display: flex;
-  }
-  
+
+
+
+@media only screen and (min-width: 200px )and (max-width:767px){
   .hero-container {
-    width: 85%;
-    align-items: center;
-    flex-direction: column;
+    width: 100%;
+    /* align-items: center; */
+    /* flex-direction: column; */
     overflow: hidden;
     border-radius: 1.25rem;
-
-  }
-
-  .leftHeroPage, .rightHeroPage {
-    width: 100%;
-    aspect-ratio: 5/4;
-    height: 50%;
-  }
-
-  .leftHeroPage {
-      border-radius: 25px; 
-      padding: 20px; 
-  }
-  
-
-  .leftHeroPage h1 {
-      font-size: 1.5rem;
-  }
-
-  .leftHeroPage p {
-      padding-left: 1em; 
-  }
+}
+.Main {
+  /* width: 100vw; */
+  display: flex;
+}
+.leftHeroPage h1 {
+  font-size: 21px;
+  text-align: center;
+}
+.leftHeroPage p {
+  text-align: start;
+  padding-left: 0.5rem;
+}
+.maincategories {
+  margin-top: 40px;
+  display: none;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+}
+.recipeCards {
+  width: 100%;
+  display: table-row-group;
+  /* flex-direction: column; */
+  /* align-items: center; */
 }
 
-
+}
 /* Categories */
 .maincategories{
   margin-top: 40px;
@@ -312,6 +313,7 @@ flex-wrap: wrap;
 }
 .card{
 margin: 10px 0;
+flex-basis: 30%;
 text-align: center;
 padding: 0px 0px;
 border-radius: 30px;
@@ -362,6 +364,36 @@ letter-spacing: -0.96px;
     .card{
       margin: 10px;
     }
+    .recipe{
+      
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: center;
+    
+    }
+    .recipetitle h1 {
+      color: #000;
+      text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+      font-family: Inter;
+      font-size: 27px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: normal;
+      letter-spacing: -1.92px;
+      text-align: center;
+      margin-top: 50px;
+  }
+  .recipetitle p {
+    color: rgba(0, 0, 0, 0.60);
+    text-align: center;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    font-family: Inter;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 28px;
+}
 }
 
 /* End Part */
@@ -526,6 +558,20 @@ padding:1rem;
     font-weight: 600;
     line-height: normal;
     letter-spacing: -1.92px;
+}
+.sideCard img{
+  overflow: hidden;
+}
+.delicacy-container {
+  display: flex;
+  flex-direction: column;
+  border-radius: 25px;
+  background: #E7F9FD;
+  width: 90%;
+  /* padding-inline: 90px; */
+  /* align-items: center; */
+  justify-content: center;
+  overflow: hidden;
 }
 }
 
@@ -1449,6 +1495,31 @@ letter-spacing: -0.32px;
 }
 
 @media only screen and (min-width: 200px )and (max-width:767px) {
+  #textmsg {
+    display: flex;
+    justify-content: center;
+    margin-left: 32px;
+    flex-direction: column;
+    padding: 15px 0px 10px 0px;
+}
+#fname {
+  width: 100px;
+  padding: 5px;
+  border-radius: 5px;
+}
+#lname {
+  width: 100px;
+  padding: 5px;
+  border-radius: 5px;
+}
+body{
+overflow-x: hidden;
+}
+.Sendbutton button{
+  
+    margin-left: 88px;
+
+}
   .fullName {
     gap: 10px;
   }
