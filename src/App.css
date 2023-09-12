@@ -1544,6 +1544,10 @@ letter-spacing: -0.32px;
 }
 
 @media only screen and (min-width: 200px )and (max-width:767px) {
+  .fullName{
+    display: flex;
+    flex-direction: column;
+  }
   #textmsg {
     display: flex;
     justify-content: center;
@@ -1557,9 +1561,7 @@ letter-spacing: -0.32px;
   padding: 5px;
   border-radius: 5px;
 }
-body{
-overflow-x: hidden;
-}
+
 .Submitbutton button{
   
     margin-left: 88px;
@@ -1586,21 +1588,28 @@ overflow-x: hidden;
     justify-content: center;
     /* height: 50vh; */
   }
-
+#textmsg{
+  margin-left: 0;
+}
   #message {
     /* padding: 50px; */
   }
   #fname {
     width: 100%;
     padding: 5px;
+    border-radius: 5px;
 }
   #lname {
     width: 100%;
     padding: 5px;
   }
+  #enquiry{
+    border-radius: 5px;
+  }
   
   .Submitbutton {
     margin-bottom: 20px;
+    justify-content: flex-end;
   }
   .inputForm h1 {
     display: flex;
