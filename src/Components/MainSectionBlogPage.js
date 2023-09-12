@@ -1,5 +1,14 @@
 import React from "react";
 
+// const dummyData = [
+//   {
+//     id: 1,
+//     title: "Crochet Projects for Noodle Lovers",
+//     image: "/Assets/meatballs.png",
+//     text:"Lorem ipsum dolor sit amet, consectetuipisicing elit, sed doeiusmod tempor incididunt ut labore et dolore magna aliqut enim"
+//   },
+  
+// ];
 const MainSectionBlogPage = () => {
   return (
     <>
@@ -97,14 +106,14 @@ const MainSectionBlogPage = () => {
         </div>
       </div>
 
-      <div class="pagination">
-        <a href="#" class="active">1</a>
+      {/* <div className="pagination">
+        <a href="#" className="active">1</a>
         <a href="#">2</a>
         <a href="#">3</a>
         <a href="#">4</a>
         <a href="#">5</a>
         <a href="#">Next </a>
-      </div>
+      </div> */}
     </>
   );
 };

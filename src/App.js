@@ -4,6 +4,7 @@ import Home from './Pages/Home';
 import Recipe from './Pages/Recipe';
 import Blog from './Pages/Blog';
 import Contact from './Pages/Contact';
+import BlogPostPage from './Pages/BlogPostPage';
 // import AboutUs from './Pages/AboutUs';
 
 function App() {
@@ -40,6 +41,7 @@ function App() {
            <Route path="/Recipe" element={<Recipe/>}/>
            <Route path="/Blog" element={<Blog/>}/>
            <Route path="/Contact" element={<Contact/>}/>
+           <Route path="/BlogPostPage" element={<BlogPostPage/>}/>
            {/* <Route path="/AboutUs" element={<AboutUs/>}/> */}
           </Routes>
       </BrowserRouter>

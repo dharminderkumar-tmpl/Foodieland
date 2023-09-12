@@ -1,6 +1,25 @@
-import React from "react";
+import React, { useState } from "react";
 
-const AritcleBlogPage = () => {
+function AritcleBlogPage() {
+  const [searchQuery, setSearchQuery] = useState("");
+  const [error, setError] = useState("");
+
+  const handleChange = (e) => {
+    setSearchQuery(e.target.value);
+    setError("");
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    if (searchQuery.trim() === "") {
+      setError("Please enter a search query.");
+    } else {
+      console.log("Search query:", searchQuery);
+      
+    }
+  };
+
+
   return (
     <div className="blogName">
       <h1>Blog & Article</h1>
@@ -14,16 +33,18 @@ const AritcleBlogPage = () => {
             <input
               type="text"
               className="text-input"
-              placeholder="Search article,news or recipe."
+              placeholder="Search article, news, or recipe."
+              value={searchQuery}
+              onChange={handleChange}
             />
             
-              <button>Submit</button>
-            
+              <button onClick={handleSubmit}>Submit</button>
+              {/* {error && <p className="error">{error}</p>} */}
           </div>
         </div>
+          {error && <p className="error" id="errormsg">{error}</p>}
       </div>
     </div>
   );
-};
-
-export default AritcleBlogPage;
+  }
+export default AritcleBlogPage
