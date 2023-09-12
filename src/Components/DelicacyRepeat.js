@@ -1,4 +1,5 @@
 import React from "react";
+import EmailValidation from "./EmailValidation";
 
 const DelicacyRepeat = () => {
   return (
@@ -13,16 +14,17 @@ const DelicacyRepeat = () => {
         </p>
         
           <div className="email-container">
-            <div className="border">
-              <input
+            {/* <div className="border"> */}
+              {/* <input
                 type="email"
                 className="email"
                 placeholder="Your email address..."
               />
               <div className="submitButton">
                 <button>Submit</button>
-              </div>
-            </div>
+              </div> */}
+              <EmailValidation placeholder="Your email address..."  />
+            {/* </div> */}
           </div>
           <div className="sideCard">
             <img src={"/Assets/mixedSalad.png"} alt="baked chicken" />

@@ -143,7 +143,7 @@ body{
 
 .leftHeroPage, .rightHeroPage {
   overflow: hidden;
-  width: 50%;
+  /* width: 50%; */
 }
 
 .rightHeroPage img {
@@ -201,13 +201,14 @@ body{
 .Main {
   /* width: 100vw; */
   display: flex;
+  padding-inline: 0;
 }
 .leftHeroPage h1 {
   font-size: 21px;
   text-align: center;
 }
 .leftHeroPage p {
-  text-align: start;
+  text-align: center;
   padding-left: 0.5rem;
 }
 .maincategories {
@@ -218,7 +219,7 @@ body{
   align-items: center;
 }
 .recipeCards {
-  width: 100%;
+  /* width: 100%; */
   display: table-row-group;
   /* flex-direction: column; */
   /* align-items: center; */
@@ -305,7 +306,7 @@ flex-wrap: wrap;
 /* recipePart */
 
 .recipeCards {
-  padding: 0 80px;
+  /* padding: 0 80px; */
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -315,7 +316,7 @@ flex-wrap: wrap;
 margin: 10px 0;
 flex-basis: 30%;
 text-align: center;
-padding: 0px 0px;
+padding: 0;
 border-radius: 30px;
 background: linear-gradient(180deg, rgba(231, 249, 253, 0.00) 0%, #E7F9FD 100%);
 box-shadow: 0px 0px 10px 3px lightblue;
@@ -342,7 +343,6 @@ font-size: 16px;
 font-style: normal;
 font-weight: 400;
 line-height: 28px; /* 175% */
-
 }
 
 .card_name{
@@ -357,13 +357,38 @@ letter-spacing: -0.96px;
 
 @media only screen and (min-width: 200px )and (max-width:767px) {
   .recipeCards {
-        width: 100%;
+        /* width: 100%; */
         flex-direction: column;
         align-items: center;
+        /* padding-inline: 1rem; */
     }
     .card{
-      margin: 10px;
+      /* margin: 10px; */
     }
+    .Main {
+      /* width: 100vw; */
+      display: flex;
+      flex-direction: column;
+      padding-inline: 0;
+  }
+    .rightHeroPage {
+      overflow: hidden;
+      /* width: 50%; */
+
+  }
+  .hero-container {
+    width: 100%;
+    /* align-items: center; */
+    flex-direction: column;
+    overflow: hidden;
+    border-radius: 1.25rem;
+}
+.hero-container .leftHeroPage{
+  overflow: hidden;
+}
+.hero-container .rightHeroPage{
+  overflow: hidden;
+}
     .recipe{
       
         display: flex;
@@ -372,19 +397,10 @@ letter-spacing: -0.96px;
         align-items: center;
     
     }
-    .recipetitle h1 {
-      color: #000;
-      text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-      font-family: Inter;
+.recipetitle h1 {
       font-size: 27px;
-      font-style: normal;
-      font-weight: 600;
-      line-height: normal;
-      letter-spacing: -1.92px;
-      text-align: center;
-      margin-top: 50px;
   }
-  .recipetitle p {
+.recipetitle p {
     color: rgba(0, 0, 0, 0.60);
     text-align: center;
     text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
@@ -548,7 +564,8 @@ padding:1rem;
   display: flex;
   justify-content: space-between;
 }
-@media(max-width:320px) {
+
+@media only screen and (min-width: 200px )and (max-width:767px) {
   .delicacy-container h1{
   text-align: center;
     color: #000;
@@ -565,7 +582,7 @@ padding:1rem;
 .delicacy-container {
   display: flex;
   flex-direction: column;
-  border-radius: 25px;
+  border-radius: 8px;
   background: #E7F9FD;
   width: 90%;
   /* padding-inline: 90px; */
@@ -667,14 +684,14 @@ background: linear-gradient(180deg, rgba(231, 249, 253, 0.00) 0%, #E7F9FD 100%);
 }
 
 
-@media screen and (max-width: 768px) {
+@media only screen and (min-width: 200px )and (max-width:767px) {
   .chef-main {
     width: 100vw;
     display: flex;
   }
   
   .chef-container {
-    width: 85%;
+    width: 100%;
     align-items: center;
     flex-direction: column;
     overflow: hidden;
@@ -695,11 +712,16 @@ background: linear-gradient(180deg, rgba(231, 249, 253, 0.00) 0%, #E7F9FD 100%);
 
   .leftChefPage h1 {
       font-size: 1.5rem;
-      align-items: center;
+      /* align-items: center; */
+      text-align: center;
   }
 
   .leftChefPage p {
-      padding-left: 1em; 
+      text-align: center;
+      padding-top: 0;
+  }
+  .leftChefPage button{
+    align-self: center;
   }
 }
 /* Footer */
@@ -814,8 +836,11 @@ letter-spacing: -0.36px;
 
   .footer-menu ,
   .footer-social  {
-    margin-top: 10px;
-    justify-content: center;
+    
+      margin-top: 10px;
+      display: flex;
+      justify-content: center;
+  
   }
   .footer-container{
     flex-direction: column;
@@ -1117,13 +1142,27 @@ letter-spacing: -0.32px;
 
 }
 .recipe1{
-  width: 90%;
+  width: 100%;
 }
 .recipetitle1 {
   display: flex;
   justify-content: flex-start;
 }
-
+@media only screen and (min-width: 200px )and (max-width:767px){
+  .recipetitle1{
+    display: flex;
+    flex-direction: column;
+  }
+  .recipetitle1 h1 {
+    font-size: 34px;
+    text-align: center;
+}
+.recipetitle1 p{
+  text-align: center;
+  padding: 0;
+  margin: 0;
+}
+}
 /* Blog Page */
 /* first section blog and aricle post page */
 .blogName{
@@ -1190,9 +1229,12 @@ line-height: 28px; /* 175% */
 }
 .blogName .search-container {
   margin-top: 20px;
+  margin-inline: auto;
 }
+ 
 .mainsearch{
   display: flex;
+  flex-direction: column;
   justify-content: center;
 }
 .mainsectionblogpage {
@@ -1401,7 +1443,7 @@ letter-spacing: -2.56px;
 .fullName {
   display: flex;
   gap: 20px;
-  justify-content: center;
+  /* justify-content: center; */
   font-size: large;
 }
 #firstname {
@@ -1427,6 +1469,13 @@ text-transform: uppercase;
 #lastname {
   display: flex;
   flex-direction: column;
+  width: 100%;
+}
+#enquiry{
+  padding: 10px;
+  border-radius: 16px;
+border: 1px solid rgba(0, 0, 0, 0.10);
+background: #FFF;
 }
 #fname {
   /* background-color: gray; */
@@ -1466,19 +1515,19 @@ background: #FFF;
   /* background-color: gray; */
 }
 #message {
-  padding: 60px;
+  padding: 1rem;
   /* background-color: gray; */
   border: 0;
   border-radius: 10px;
   border-radius: 16px;
 border: 1px solid rgba(0, 0, 0, 0.10);
 }
-.Sendbutton {
+.Submitbutton {
   display: flex;
   justify-content: center;
   margin-top: 25px;
 }
-.Sendbutton button {
+.Submitbutton button {
   border-radius: 16px;
 border: 1px solid rgba(0, 0, 0, 0.10);
   color: white;
@@ -1502,11 +1551,7 @@ letter-spacing: -0.32px;
     flex-direction: column;
     padding: 15px 0px 10px 0px;
 }
-#fname {
-  width: 100px;
-  padding: 5px;
-  border-radius: 5px;
-}
+
 #lname {
   width: 100px;
   padding: 5px;
@@ -1515,7 +1560,7 @@ letter-spacing: -0.32px;
 body{
 overflow-x: hidden;
 }
-.Sendbutton button{
+.Submitbutton button{
   
     margin-left: 88px;
 
@@ -1543,21 +1588,18 @@ overflow-x: hidden;
   }
 
   #message {
-    padding: 50px;
+    /* padding: 50px; */
   }
   #fname {
-    width: 100px;
+    width: 100%;
     padding: 5px;
-  }
+}
   #lname {
-    width: 100px;
+    width: 100%;
     padding: 5px;
   }
-  #fname {
-    width: 100px;
-    padding: 5px;
-  }
-  .Sendbutton {
+  
+  .Submitbutton {
     margin-bottom: 20px;
   }
   .inputForm h1 {
@@ -1571,5 +1613,120 @@ overflow-x: hidden;
     line-height: normal;
     letter-spacing: -2.56px;
     padding-bottom: 50px;
+}
+}
+/* Blog Post Page redirected from blogs */
+
+.mainBannerPost{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.mainBannerPost h1{
+  text-align: center;
+  margin-top: 20px;
+  color: #000;
+/* text-align: center; */
+font-family: Inter;
+font-size: 64px;
+font-style: normal;
+font-weight: 600;
+line-height: normal;
+letter-spacing: -2.56px;
+}
+.mainBannerPost p {
+  text-align: center;
+  margin-top: 20px;
+  color: rgba(0, 0, 0, 0.60);
+/* text-align: center; */
+font-family: Inter;
+font-size: 16px;
+font-style: normal;
+font-weight: 400;
+line-height: 28px; /* 175% */
+}
+.mainBannerPost img{
+  align-self: center;
+  border-radius: 25px;
+  margin-top: 20px;
+}
+.Qanda {
+  width: 90%;
+  display: flex;
+  justify-content: center;
+  margin-left: 80px;
+}
+.Qanda h2{
+  margin-top: 20px;
+  color: #000;
+font-family: Inter;
+font-size: 24px;
+font-style: normal;
+font-weight: 600;
+line-height: normal;
+letter-spacing: -0.96px;
+}
+.Qanda p{
+  margin-top: 20px;
+  color: rgba(0, 0, 0, 0.60);
+font-family: Inter;
+font-size: 16px;
+font-style: normal;
+font-weight: 400;
+line-height: 28px; /* 175% */
+}
+.socialmedia{
+  display: flex;
+  flex-direction: column;
+}
+.socialmedia h3{
+  color: #000;
+font-family: Inter;
+font-size: 14px;
+font-style: normal;
+font-weight: 600;
+line-height: normal;
+letter-spacing: 1.4px;
+text-transform: uppercase;
+}
+.social-social {
+  display: flex;
+  flex-direction: column;
+  /* align-content: stretch; */
+  /* justify-content: center; */
+  align-items: center;
+}
+.social-social a{
+  padding-top: 10px;
+}
+
+
+.blogans img{
+   width: 70%;
+   margin-top: 20px;
+}
+@media only screen and (min-width: 200px )and (max-width:767px){
+  .mainBannerPost img{
+    width: 100%;
+  }
+  .Qanda{
+    display: flex;
+    flex-direction: column;
+     margin-left: 0;
+  }
+  .blogans img{
+    width: 100%;
+ }
+ .socialmedia {
+  display: flex;
+  flex-direction: column;
+}
+.social-social {
+  
+  flex-direction: row;
+  gap: 20px;
+}
+.mainBannerPost h1{
+  font-size: 30px;
 }
 }
