@@ -22,7 +22,6 @@ const dummyData = [
   },
 ];
 
-// import cheeseBurger from '../Assets/cheeseBurger.png';
 
 const LikeRecipe = () => {
   return (

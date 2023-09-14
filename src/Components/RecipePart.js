@@ -1,38 +1,16 @@
-import React from "react";
-const recipePart = () => {
-  const dummyData = [
-    {
-      id: 1,
-      title: "Chicken Meatballs with Cream Cheese",
-      image: "/Assets/meatballs.png",
-    },
-    {
-      id: 2,
-      title: "Chicken Meatballs with Cream Cheese",
-      image: "/Assets/cheeseBurger.png",
-    },
-    {
-        id: 3,
-        title: "Chicken Meatballs with Cream Cheese",
-        image: "/Assets/meatballs.png",
-      },
-      {
-        id: 4,
-        title: "Chicken Meatballs with Cream Cheese",
-        image: "/Assets/cheeseBurger.png",
-      },
-      {
-        id: 5,
-        title: "Chicken Meatballs with Cream Cheese",
-        image: "/Assets/meatballs.png",
-      },
-      {
-        id: 6,
-        title: "Chicken Meatballs with Cream Cheese",
-        image: "/Assets/meatballs.png",
+import React, { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
+// import { useParams } from "react-router-dom";
 
-      },
-  ];
+const RecipePart = () => {
+  const [recipeData, setRecipeData] = useState(null);
+  // const { recipeId }  =  useParams()
+  useEffect(() => {
+    fetch("https://cooking-blogs.onrender.com/api/recipes/suggestions")
+      .then((response) => response.json())
+      .then((data) => setRecipeData(data))
+      .catch((error) => console.error("Error fetching data:", error));
+  }, []);
 
   return (
     <div className="recipe">
@@ -44,12 +22,12 @@ const recipePart = () => {
         </p>
 
         <div className="recipeCards">
-          {dummyData.map((data) => (
-            <div className="card" key={data.id}>
-              <img src={data.image} alt="salad" />
-
-              <p className="card_name">{data.title}</p>
-
+          {recipeData?.recipes?.map((data) => (
+            <div className="card" key={data?.id}>
+              <Link to={`/recipe/${data?.id}`}>
+                <img src={data?.image} alt="img" />
+                <p className="card_name">{data.title}</p>
+              </Link>
             </div>
           ))}
         </div>
@@ -57,5 +35,4 @@ const recipePart = () => {
     </div>
   );
 };
-
-export default recipePart;
+export default RecipePart;

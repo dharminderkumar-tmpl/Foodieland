@@ -38,10 +38,10 @@ function App() {
          <Routes>
           {/* {routerPath.map((route)=>(<Route exact path={route?.path} element={route?.element} />))} */}
            <Route path="/" element={<Home/>}/>
-           <Route path="/Recipe" element={<Recipe/>}/>
-           <Route path="/Blog" element={<Blog/>}/>
-           <Route path="/Contact" element={<Contact/>}/>
-           <Route path="/BlogPostPage" element={<BlogPostPage/>}/>
+           <Route path="/recipe/:recipeId" element={<Recipe/>}/>
+           <Route path="/blog" element={<Blog/>}/>
+           <Route path="/contact" element={<Contact/>}/>
+           <Route path="/blogpostpage/:blogId" element={<BlogPostPage/>}/>
            {/* <Route path="/AboutUs" element={<AboutUs/>}/> */}
           </Routes>
       </BrowserRouter>

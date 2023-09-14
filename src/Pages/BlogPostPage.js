@@ -1,31 +1,46 @@
 import '../App.css';
-// import Categories from '../Components/Categories';
-// import ChefPart from '../Components/ChefPart';
 import DelicacyRepeat from '../Components/DelicacyRepeat';
-import Endpart from '../Components/Endpart';
 import Footer from '../Components/Footer';
-// import Hero from '../Components/Hero';
 import Navbar from '../Components/Navbar';
-// import RecipePart from '../Components/RecipePart';
+
+import { useParams } from 'react-router-dom';
+
 import LikeRecipe from '../Components/LikeRecipe';
 import BlogPostPageblogs from '../Components/BlogPostPageblogs';
+import React, { useEffect, useState } from "react";
 
-function BlogPostPage() {
-    return (
-      <div>
-        <Navbar/>
-        {/* <Hero/> */}
-        {/* <Categories/> */}
-        {/* <RecipePart/> */}
-        {/* <ChefPart/> */}
-        {/* <Endpart/> */}
-       <BlogPostPageblogs/>
-        <DelicacyRepeat/>
-        <LikeRecipe/>
-        <Footer/>
-      </div>
-    );
-  }
+
+const BlogPostPage = () => {
+  const [blogs, setBlogs] = useState([]); 
+  const { blogId }  =  useParams()
   
-  export default BlogPostPage;
-  
+  const API = `https://cooking-blogs.onrender.com/api/blogs/${blogId}`; 
+
+  const fetchBlogs = async (url) => {
+    try {
+      const res = await fetch(url).then((res) => res.json());
+      if (res) {
+        setBlogs(res);
+      }
+    } catch (err) {
+      console.error(err);
+    }
+  };
+
+  useEffect(() => {
+    fetchBlogs(API);
+  }, []);
+
+  return (
+    <div>
+      <Navbar />
+     {/* <div></div> */}
+      <BlogPostPageblogs blogData={blogs} />
+      <DelicacyRepeat />
+      <LikeRecipe />
+      <Footer />
+    </div>
+  );
+};
+
+export default BlogPostPage;

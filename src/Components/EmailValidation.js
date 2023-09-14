@@ -1,11 +1,12 @@
 import React, { useState } from "react";
 
-function EmailValidation({ placeholder}) {
+function EmailValidation({ placeholder }) {
   const [formData, setFormData] = useState({
     email: "",
   });
 
   const [errors, setErrors] = useState({});
+  const [isSuccess, setIsSuccess] = useState(false); // New state for success message
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -26,18 +27,17 @@ function EmailValidation({ placeholder}) {
       if (!value.trim()) {
         setErrors({
           ...errors,
-          [name]: "",
+          [name]: "Email is required",
         });
       } else if (!emailRegex.test(value)) {
         setErrors({
           ...errors,
-          [name]: "",
+          [name]: "Invalid email address",
         });
       } else {
-        
         setErrors({
           ...errors,
-          [name]: "",
+          [name]: "", // Clear the error message when it's valid
         });
       }
     }
@@ -47,31 +47,57 @@ function EmailValidation({ placeholder}) {
     e.preventDefault();
     // Check for errors before submitting the form
     if (!errors.email) {
-      
-      console.log("Form submitted:", formData);
+      // Assuming you have an API endpoint for submitting the email
+      fetch("https://cooking-blogs.onrender.com/api/newsletter-subscribe", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      })
+        .then((response) => {
+          if (response.ok) {
+            setIsSuccess(true); // Set success state to true
+            console.log("Email success:", formData);
+            // Reset the form data
+            setFormData({
+              email: "",
+            });
+          } else {
+            console.error("Form submission failed due to API error.");
+          }
+        })
+        .catch((error) => {
+          console.error("Form submission failed due to network error:", error);
+        });
     } else {
-      
       console.error("Form submission failed due to validation errors.");
     }
   };
 
   return (
-    <form onSubmit={handleSubmit} className="border">
-        <input
-          type="email"
-          id="email"
-          className="email"
-          name="email"
-          placeholder={placeholder}
-          value={formData.email}
-          onChange={handleChange}
-          required
-        />
-        {errors.email && <p className="error">{errors.email}</p>}
-      <div className="submitButton">
-                <button type='submit'>Submit</button>
-              </div>
-    </form>
+    <div>
+      {isSuccess ? (
+        <p className="success">Email successfully registered!</p>
+      ) : (
+        <form onSubmit={handleSubmit} className="border">
+          <input
+            type="email"
+            id="email"
+            className="email"
+            name="email"
+            placeholder={placeholder}
+            value={formData.email}
+            onChange={handleChange}
+            required
+          />
+          {errors.email && <p className="error">{errors.email}</p>}
+          <div className="submitButton">
+            <button type="submit">Submit</button>
+          </div>
+        </form>
+      )}
+    </div>
   );
 }
 

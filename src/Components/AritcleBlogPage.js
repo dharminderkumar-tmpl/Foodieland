@@ -15,10 +15,8 @@ function AritcleBlogPage() {
       setError("Please enter a search query.");
     } else {
       console.log("Search query:", searchQuery);
-      
     }
   };
-
 
   return (
     <div className="blogName">
@@ -37,14 +35,18 @@ function AritcleBlogPage() {
               value={searchQuery}
               onChange={handleChange}
             />
-            
-              <button onClick={handleSubmit}>Submit</button>
-              {/* {error && <p className="error">{error}</p>} */}
+
+            <button onClick={handleSubmit}>Submit</button>
+            {/* {error && <p className="error">{error}</p>} */}
           </div>
         </div>
-          {error && <p className="error" id="errormsg">{error}</p>}
+        {error && (
+          <p className="error" id="errormsg">
+            {error}
+          </p>
+        )}
       </div>
     </div>
   );
-  }
-export default AritcleBlogPage
+}
+export default AritcleBlogPage;
