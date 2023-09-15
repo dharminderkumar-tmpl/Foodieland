@@ -1,52 +1,27 @@
-import './App.css';
- import {BrowserRouter, Route, Routes} from 'react-router-dom'
-import Home from './Pages/Home';
-import Recipe from './Pages/Recipe';
-import Blog from './Pages/Blog';
-import Contact from './Pages/Contact';
-import BlogPostPage from './Pages/BlogPostPage';
+import "./App.css";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import Home from "./Pages/Home";
+import Recipe from "./Pages/Recipe";
+import Blog from "./Pages/Blog";
+import Contact from "./Pages/Contact";
+import BlogPostPage from "./Pages/BlogPostPage";
 // import AboutUs from './Pages/AboutUs';
-
+import ScrollToTop from "./Components/ScrollToTop";
 function App() {
-
-  // const routerPath = [
-  //   {
-  //     path: "/",
-  //     element: <Home/>
-  //   },
-  //   {
-  //     path: "/Recipe", 
-  //     element: <Recipe/>
-  //   },
-  //   {
-  //     path: "/Blog",
-  //     element: <Blog/>
-  //   },
-  //   {
-  //     path: "/Contact",
-  //     element: <Contact/>
-  //   },
-  //   {
-  //     path: "/AboutUs",
-  //     element: <AboutUs/>
-  //   }
-   
-  // ]
-  
-    return (
-      <BrowserRouter>
-         <Routes>
-          {/* {routerPath.map((route)=>(<Route exact path={route?.path} element={route?.element} />))} */}
-           <Route path="/" element={<Home/>}/>
-           <Route path="/Recipe" element={<Recipe/>}/>
-           <Route path="/Blog" element={<Blog/>}/>
-           <Route path="/Contact" element={<Contact/>}/>
-           <Route path="/BlogPostPage" element={<BlogPostPage/>}/>
-           {/* <Route path="/AboutUs" element={<AboutUs/>}/> */}
-          </Routes>
-      </BrowserRouter>
-    );
-  }
-
+  return (
+    <Router>
+      <ScrollToTop />
+      <Routes>
+        {/* {routerPath.map((route)=>(<Route exact path={route?.path} element={route?.element} />))} */}
+        <Route path="/" element={<Home />} />
+        <Route path="/recipe/:recipeId" element={<Recipe />} />
+        <Route path="/blog" element={<Blog />} />
+        <Route path="/contact" element={<Contact />} />
+        <Route path="/blogpostpage/:blogId" element={<BlogPostPage />} />
+        {/* <Route path="/AboutUs" element={<AboutUs/>}/> */}
+      </Routes>
+    </Router>
+  );
+}
 
 export default App;

@@ -7,6 +7,7 @@ import Footer from '../Components/Footer';
 import AritcleBlogPage from '../Components/AritcleBlogPage';
 import MainSectionBlogPage from '../Components/MainSectionBlogPage';
 
+
 function Blog() {
     return (
       <div>
@@ -14,7 +15,7 @@ function Blog() {
         
        <AritcleBlogPage/>
        <MainSectionBlogPage/>
-        <DelicacyRepeat/>
+       <DelicacyRepeat/>
        
         <Footer/>
         

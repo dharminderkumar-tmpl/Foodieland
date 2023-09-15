@@ -3,7 +3,7 @@ import React, { useState } from "react";
 function ContactMe() {
   const [formData, setFormData] = useState({
     fname: "",
-    email: "",
+    emailId: "",
     subject: "",
     message: "",
     enquiry: "",
@@ -19,38 +19,63 @@ function ContactMe() {
     });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    // Validate form data before submission
+    
+    
     if (validateForm()) {
-      // Handle form submission here
-      console.log("Form submitted:", formData);
+      try {
+        const response = await fetch('https://cooking-blogs.onrender.com/api/contact-us', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(formData),
+        });
+
+        if (response.ok) {
+          
+          console.log("Form submitted successfully!");
+          
+          setFormData({
+            fname: "",
+            email: "",
+            subject: "",
+            message: "",
+            enquiry: "",
+          });
+        } else {
+          
+          console.error("Error submitting the form.");
+        }
+      } catch (error) {
+       
+        console.error("Network error:", error);
+      }
     }
   };
 
   const validateForm = () => {
     const newErrors = {};
 
-    // Validate name
+   
     if (!formData.fname.trim()) {
       newErrors.fname = "Name is required";
     }
 
-    // Validate email
-    if (!formData.email.trim()) {
-      newErrors.email = "Email is required";
+    
+    if (!formData.emailId.trim()) {
+      newErrors.emailId = "Email is required";
     } else if (
       !/^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,4}$/.test(formData.email)
     ) {
       newErrors.email = "Invalid email address";
     }
 
-    // Validate message
     if (!formData.message.trim()) {
       newErrors.message = "Message is required";
     }
 
-    
     setErrors(newErrors);
 
     return Object.keys(newErrors).length === 0;
@@ -73,7 +98,6 @@ function ContactMe() {
                     {" "}
                     <b>NAME</b>
                   </label>
-
                   <input
                     type="text"
                     id="fname"
@@ -86,59 +110,56 @@ function ContactMe() {
                   {errors.fname && <p className="error">{errors.fname}</p>}
                 </div>
                 <div id="lastname">
-                  <label htmlFor="lname">
+                  <label htmlFor="email">
                     {" "}
                     <b>EMAIL ADDRESS </b>
                   </label>
-
                   <input
                     type="email"
                     name="email"
                     value={formData.email}
                     onChange={handleChange}
-                    id="lname"
+                    id="emailId"
                     required
                     placeholder="Your email address.."
                   />
-                  {errors.email && <p className="error">{errors.email}</p>}
+                  {errors.emailId && <p className="error">{errors.emailId}</p>}
                 </div>
               </div>
               <div className="fullName">
-                <div id="firstname">
-                  <label htmlFor="fname">
+                <div className="subject">
+                  <label htmlFor="subject">
                     {" "}
                     <b>SUBJECT</b>
                   </label>
-
                   <input
                     type="text"
                     value={formData.subject}
                     onChange={handleChange}
-                    id="fname"
+                    id="subject"
                     name="subject"
                     required
                     placeholder="Enter subject.."
                   />
                 </div>
-                <div id="lastname">
-  <label htmlFor="enquiry">
-    <b>ENQUIRY TYPE</b>
-  </label>
-  <select
-    id="enquiry"
-    name="enquiry"
-    required
-    value={formData.enquiry}
-    onChange={handleChange}
-  >
-    <option value="">Select an option</option>
-    <option value="advertising">Advertising</option>
-    <option value="marketing">Marketing</option>
-    <option value="sales">Sales</option>
-  </select>
-  {errors.enquiry && <p className="error">{errors.enquiry}</p>}
-</div>
-
+                <div className="enquiry">
+                  <label htmlFor="enquiry">
+                    <b>ENQUIRY TYPE</b>
+                  </label>
+                  <select
+                    id="enquiry"
+                    name="enquiry"
+                    required
+                    value={formData.enquiry}
+                    onChange={handleChange}
+                  >
+                    <option value="">Select an option</option>
+                    <option value="advertising">Advertising</option>
+                    <option value="marketing">Marketing</option>
+                    <option value="sales">Sales</option>
+                  </select>
+                  {errors.enquiry && <p className="error">{errors.enquiry}</p>}
+                </div>
               </div>
 
               <div id="textmsg">
@@ -146,7 +167,6 @@ function ContactMe() {
                   {" "}
                   <b>MESSAGES</b>
                 </label>
-
                 <textarea
                   id="message"
                   name="message"

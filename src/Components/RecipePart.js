@@ -1,61 +1,51 @@
-import React from "react";
-const recipePart = () => {
-  const dummyData = [
-    {
-      id: 1,
-      title: "Chicken Meatballs with Cream Cheese",
-      image: "/Assets/meatballs.png",
-    },
-    {
-      id: 2,
-      title: "Chicken Meatballs with Cream Cheese",
-      image: "/Assets/cheeseBurger.png",
-    },
-    {
-        id: 3,
-        title: "Chicken Meatballs with Cream Cheese",
-        image: "/Assets/meatballs.png",
-      },
-      {
-        id: 4,
-        title: "Chicken Meatballs with Cream Cheese",
-        image: "/Assets/cheeseBurger.png",
-      },
-      {
-        id: 5,
-        title: "Chicken Meatballs with Cream Cheese",
-        image: "/Assets/meatballs.png",
-      },
-      {
-        id: 6,
-        title: "Chicken Meatballs with Cream Cheese",
-        image: "/Assets/meatballs.png",
+import React, { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
+// import { useParams } from "react-router-dom";
 
-      },
-  ];
+const RecipePart = () => {
+  const [recipeData, setRecipeData] = useState(null);
+  // const { recipeId }  =  useParams()
+  useEffect(() => {
+    fetch("https://cooking-blogs.onrender.com/api/recipes/suggestions")
+      .then((response) => response.json())
+      .then((data) => setRecipeData(data))
+      .catch((error) => console.error("Error fetching data:", error));
+  }, []);
 
   return (
     <div className="recipe">
-      <div className="recipetitle">
-        <h1>Simple and tasty recipes</h1>
-        <p>
-          Lorem ipsum dolor sit amet, consectetuipisicing elit, sed do eiusmod
-          tempor incididunt ut labore et dolore magna aliqut enim ad minim
-        </p>
+      <a id="recipe">
+        <div className="recipetitle">
+          <h1>Simple and tasty recipes</h1>
+          <p>
+            Lorem ipsum dolor sit amet, consectetuipisicing elit, sed do eiusmod
+            tempor incididunt ut labore et dolore magna aliqut enim ad minim
+          </p>
 
-        <div className="recipeCards">
-          {dummyData.map((data) => (
-            <div className="card" key={data.id}>
-              <img src={data.image} alt="salad" />
+          <div className="recipeCards">
+            {recipeData?.recipes?.map((data) => (
+              <div className="card" key={data?.id}>
+                <Link to={`/recipe/${data?.id}`}>
+                  <img src={data?.image} alt="img" />
+                  <h3>{data.title}</h3>
 
-              <p className="card_name">{data.title}</p>
-
-            </div>
-          ))}
+                  <div className="timerdiv " id="timeron">
+                    <div className="timer timefork">
+                      <img src={"/Assets/timer.png"} alt="Facebook" />
+                      <p>30 min</p>
+                    </div>
+                    <div className="forknife timefork">
+                      <img src={"/Assets/fork.png"} alt="Facebook" />
+                      <p>Snack</p>
+                    </div>
+                  </div>
+                </Link>
+              </div>
+            ))}
+          </div>
         </div>
-      </div>
+      </a>
     </div>
   );
 };
-
-export default recipePart;
+export default RecipePart;

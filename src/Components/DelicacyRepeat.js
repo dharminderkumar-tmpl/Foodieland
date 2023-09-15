@@ -12,10 +12,10 @@ const DelicacyRepeat = () => {
           Lorem ipsum dolor sit amet, consectetuipisicing elit, sed do eiusmod
           tempor incididunt ut labore et dolore magna aliqut enim ad minim
         </p>
-        
-          <div className="email-container">
-            {/* <div className="border"> */}
-              {/* <input
+
+        <div className="email-container">
+          {/* <div className="border"> */}
+          {/* <input
                 type="email"
                 className="email"
                 placeholder="Your email address..."
@@ -23,20 +23,18 @@ const DelicacyRepeat = () => {
               <div className="submitButton">
                 <button>Submit</button>
               </div> */}
-              <EmailValidation placeholder="Your email address..."  />
-            {/* </div> */}
-          </div>
-          <div className="sideCard">
-            <img src={"/Assets/mixedSalad.png"} alt="baked chicken" />
-          
-            <img src={"/Assets/flower.png"} id="flower"alt="baked chicken" />
-            <img src={"/Assets/Photoplate.png"} alt="baked chicken" />
-            
+          {/* </div> */}
 
-            </div>
+          <div className="sideCard">
+            <EmailValidation placeholder="Your email address..." />
+            <img src={"/Assets/mixedSalad.png"} alt="baked chicken" />
+
+            <img src={"/Assets/flower.png"} id="flower" alt="baked chicken" />
+            <img src={"/Assets/Photoplate.png"} alt="baked chicken" />
+          </div>
         </div>
       </div>
-    
+    </div>
   );
 };
 
