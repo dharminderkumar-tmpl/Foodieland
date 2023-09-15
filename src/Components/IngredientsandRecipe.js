@@ -11,13 +11,13 @@ const IngredientsandRecipe = ({ dataFromAPI }) => {
             {dataFromAPI?.ingredients?.map((section, index) => (
               <div key={index}>
                 <span>{section.title}</span>
-                <div className="mingredient">
+                <ul className="mingredient">
                   {section?.ingredients?.map((ingredient, ingredientIndex) => (
-                    <span key={ingredientIndex} className="leftmainDish">
+                    <li key={ingredientIndex} className="leftmainDish">
                       {ingredient}
-                    </span>
+                    </li>
                   ))}
-                </div>
+                </ul>
               </div>
             ))}
           </div>

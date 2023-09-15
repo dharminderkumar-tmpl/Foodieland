@@ -2,7 +2,7 @@ import React from "react";
 const dummyData = [
   {
     id: 1,
-    title: "Mixed Tropical Fruit Salad with Superfood Boosts",
+    title: "Mixed Tropical Fruit Superfood Boosts",
     image: "/Assets/vegSalad.png",
   },
   {
@@ -22,7 +22,6 @@ const dummyData = [
   },
 ];
 
-
 const LikeRecipe = () => {
   return (
     <div className="mainrecipe1">
@@ -38,6 +37,16 @@ const LikeRecipe = () => {
               <img src={data.image} alt="salad" />
 
               <p className="card_name1">{data.title}</p>
+              <div className="timerdiv">
+                <div className="timer timefork">
+                  <img src={"/Assets/timer.png"} alt="Facebook" />
+                  <p>30 min</p>
+                </div>
+                <div className="forknife timefork">
+                  <img src={"/Assets/fork.png"} alt="Facebook" />
+                  <p>Snack</p>
+                </div>
+              </div>
             </div>
           ))}
         </div>

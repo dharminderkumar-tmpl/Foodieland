@@ -58,12 +58,12 @@ function ContactMe() {
   const validateForm = () => {
     const newErrors = {};
 
-    // Validate name
+   
     if (!formData.fname.trim()) {
       newErrors.fname = "Name is required";
     }
 
-    // Validate email
+    
     if (!formData.emailId.trim()) {
       newErrors.emailId = "Email is required";
     } else if (
@@ -72,15 +72,12 @@ function ContactMe() {
       newErrors.email = "Invalid email address";
     }
 
-    // Validate message
     if (!formData.message.trim()) {
       newErrors.message = "Message is required";
     }
 
-    // Set the new errors
     setErrors(newErrors);
 
-    // Check if there are no errors
     return Object.keys(newErrors).length === 0;
   };
 

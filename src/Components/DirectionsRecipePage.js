@@ -1,17 +1,22 @@
 import React from "react";
 
 const DirectionsRecipePage = ({ dataFromAPI }) => {
+  // console.log(dataFromAPI);
   return (
     <div className="maindir">
       <div className="leftmainDishDirection">
         <h2>Directions</h2>
-        {dataFromAPI?.directions?.map((items, index) => (
+        {dataFromAPI?.directions?.map((item, index) => (
           <div className="Directiontomake textdir" key={index}>
-            <h2>{items.title}</h2>
-            <p className="textdir">{items.description}</p>
+            
+            <span>{index + 1 + " . "}Lorem ipsum indio jdjsnnk</span>{" "}
+            <p className="textdir">
+              {item.description}
+              <hr />
+            </p>
+            {item.image && <img src={item.image} alt="salad" />}
           </div>
         ))}
-        <img src={dataFromAPI?.image} alt="salad" />
       </div>
     </div>
   );

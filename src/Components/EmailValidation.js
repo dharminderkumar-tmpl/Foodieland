@@ -6,8 +6,7 @@ function EmailValidation({ placeholder }) {
   });
 
   const [errors, setErrors] = useState({});
-  const [isSuccess, setIsSuccess] = useState(false); // New state for success message
-
+  const [isSuccess, setIsSuccess] = useState(false);
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData({
@@ -15,12 +14,10 @@ function EmailValidation({ placeholder }) {
       [name]: value,
     });
 
-    // Validate the email field
     validateEmail(name, value);
   };
 
   const validateEmail = (name, value) => {
-    // Regular expression for validating an email address
     const emailRegex = /^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,4}$/;
 
     if (name === "email") {
@@ -37,7 +34,7 @@ function EmailValidation({ placeholder }) {
       } else {
         setErrors({
           ...errors,
-          [name]: "", // Clear the error message when it's valid
+          [name]: "",
         });
       }
     }
@@ -45,9 +42,8 @@ function EmailValidation({ placeholder }) {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Check for errors before submitting the form
+
     if (!errors.email) {
-      // Assuming you have an API endpoint for submitting the email
       fetch("https://cooking-blogs.onrender.com/api/newsletter-subscribe", {
         method: "POST",
         headers: {
@@ -57,9 +53,9 @@ function EmailValidation({ placeholder }) {
       })
         .then((response) => {
           if (response.ok) {
-            setIsSuccess(true); // Set success state to true
+            setIsSuccess(true);
             console.log("Email success:", formData);
-            // Reset the form data
+
             setFormData({
               email: "",
             });
@@ -76,7 +72,7 @@ function EmailValidation({ placeholder }) {
   };
 
   return (
-    <div>
+    <div className="emailformsubmit">
       {isSuccess ? (
         <p className="success">Email successfully registered!</p>
       ) : (

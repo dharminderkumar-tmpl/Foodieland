@@ -17,7 +17,6 @@ const RecipeSectionFirst = ({ data }) => {
               <h4>Protein</h4> <p> {data?.nutritionInformation?.Protein}</p>
             </div>
             <div className="nutrient">
-              {" "}
               <h4>Carbs</h4> <p> {data?.nutritionInformation?.Carbs}</p>
             </div>
             <div className="nutrient">

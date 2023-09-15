@@ -1,27 +1,25 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 
 function AritcleBlogPage() {
-  const [searchQuery, setSearchQuery] = useState("");
-  const [error, setError] = useState("");
+  const [search, setSearch] = useState("");
+  const [searchResult, setSearchResult] = useState([]);
 
-  const handleChange = (e) => {
-    setSearchQuery(e.target.value);
-    setError("");
-  };
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    if (searchQuery.trim() === "") {
-      setError("Please enter a search query.");
-    } else {
-      console.log("Search query:", searchQuery);
-    }
+  const handleSearch = () => {
+    fetch(`https://cooking-blogs.onrender.com/api/search?searchquery=${search}`)
+      .then((response) => response.json())
+      .then((data) => {
+        setSearchResult(data);
+        console.log(data);
+      })
+      .catch((error) => {
+        console.error("Error fetching search results:", error);
+      });
   };
 
   return (
     <div className="blogName">
       <h1>Blog & Article</h1>
-
       <div>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing</p>
       </div>
@@ -32,21 +30,34 @@ function AritcleBlogPage() {
               type="text"
               className="text-input"
               placeholder="Search article, news, or recipe."
-              value={searchQuery}
-              onChange={handleChange}
+              value={search}
+              onChange={(e) => setSearch(e.target.value)}
             />
-
-            <button onClick={handleSubmit}>Submit</button>
-            {/* {error && <p className="error">{error}</p>} */}
+            <button onClick={handleSearch}>Submit</button>
           </div>
         </div>
-        {error && (
-          <p className="error" id="errormsg">
-            {error}
-          </p>
-        )}
+      </div>
+      <div className="search-results">
+        <ul>
+          {searchResult?.map((result, index) => (
+            <li key={index} className="search-result-item">
+              <Link
+                to={`/blogpostpage/${result?.id}`}
+                className="search-result-link"
+              >
+                <span>{result?.title}</span>
+                <img
+                  src={result?.image}
+                  alt={result?.title}
+                  className="search-result-image"
+                />
+              </Link>
+            </li>
+          ))}
+        </ul>
       </div>
     </div>
   );
 }
+
 export default AritcleBlogPage;

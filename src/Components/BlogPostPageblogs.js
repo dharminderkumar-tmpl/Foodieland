@@ -7,18 +7,29 @@ const BlogPostPageblogs = ({ blogData }) => {
     <div>
       <div className="mainBannerPost">
         <h1>{blogData?.title}</h1>
+        <div className="postpageauthor">
+          <div className="imageauthor">
+            <img src={blogData?.Author?.image} />
+            <h3>
+              {blogData?.Author?.firstName}
+              {blogData?.Author?.lastName}
+            </h3>
+          </div>
+          <p>{blogData?.createdAt}</p>
+        </div>
         <p>{blogData?.shortDescription}</p>
         <img src={blogData?.image} alt="Blog Banner" />
       </div>
-      <div className="Qanda">
-        {blogData?.content?.map((items) => (
-          <div className="blogans">
-            <h2>{items.title}</h2>
-            <p>{items.description}</p>
-            <img src={items.image} alt={items.title} />
-          </div>
-        ))}
-
+      <div className="secondbanner">
+        <div className="Qanda">
+          {blogData?.content?.map((items) => (
+            <div className="blogans">
+              <h2>{items.title}</h2>
+              <p>{items.description}</p>
+              <img src={items.image} alt={items.title} />
+            </div>
+          ))}
+        </div>
         <div className="socialmedia">
           <h3>SHARE THIS ON:</h3>
           <div className="social-social">
