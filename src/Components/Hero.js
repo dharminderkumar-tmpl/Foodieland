@@ -53,7 +53,7 @@ const Hero = () => {
                         <h3>View Recipe</h3>
                       </div>
                       <div className="iconban">
-                        <img src={"/Assets/play3.png"} alt="Play Icon" />
+                        <img src={"/Assets/videoicon25.png"} alt="Play Icon" />
                       </div>
                     </div>
                   </button>
