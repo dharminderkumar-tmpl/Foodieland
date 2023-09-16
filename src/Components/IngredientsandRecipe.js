@@ -21,23 +21,45 @@ const IngredientsandRecipe = ({ dataFromAPI }) => {
               </div>
             ))}
           </div>
+
           <DirectionsRecipePage dataFromAPI={dataFromAPI} />
         </div>
         <div className="RecipeRight">
-          <h1>Other Recipe</h1>
-          <div className="rightRecipeDishmain">
-            <div className="rightRecipeDish">
-              <img src={"/Assets/meatballs.png"} alt="salad" />
-              <h2>Chicken Meatball with Creamy Cheese..</h2>
+          <div className="RecipeRightUpper">
+            <h1>Other Recipe</h1>
+            <div className="rightRecipeDishmain">
+              <div className="rightRecipeDish">
+                <img src={"/Assets/meatballs.png"} alt="salad" />
+                <h2>
+                  Chicken Meatball with Creamy Cheese Chicken Meatball with
+                  Creamy Cheese Chicken Meatball with Creamy Cheese
+                </h2>
+              </div>
+              <div className="rightRecipeDish">
+                <img src={"/Assets/meatballs.png"} alt="salad" />
+                <h2>
+                  The Creamiest Creamy Chicken an The Creamiest Creamy Chicken
+                  an The Creamiest Creamy Chicken an{" "}
+                </h2>
+              </div>
+              <div className="rightRecipeDish">
+                <img src={"/Assets/potChicken.png"} alt="salad" />
+                <h2>
+                  The Best Easy One Pot Chicken and Rice The Best Easy One Pot
+                  Chicken and Rice..The Best Easy One Pot Chicken and Rice..
+                </h2>
+              </div>
             </div>
-            <div className="rightRecipeDish">
-              <img src={"/Assets/tacoMeat.png"} alt="salad" />
-              <h2>The Creamiest Creamy Chicken an..</h2>
+          </div>
+
+          <div className="adimage">
+            <div className="adtext">
+              <h2>Don't forget to eat healthy</h2>
             </div>
-            <div className="rightRecipeDish">
-              <img src={"/Assets/potChicken.png"} alt="salad" />
-              <h2>The Best Easy One Pot Chicken and Rice..</h2>
+            <div className="advertise">
+              <img src="/Assets/advertise.png" />
             </div>
+            <div className="weblink">www.foodieland.com</div>
           </div>
         </div>
       </div>

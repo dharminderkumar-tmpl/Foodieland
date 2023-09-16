@@ -9,22 +9,40 @@ import RecipeSectionFirst from "../Components/RecipeSectionFirst";
 import DelicacyRepeat from "../Components/DelicacyRepeat";
 import Footer from "../Components/Footer";
 import LikeRecipe from "../Components/LikeRecipe";
+import LoaderComp from "../Components/LoaderComp";
+
 function Home() {
   const [RecipeSuggestions, setRecipeSuggestions] = useState({});
+  const [loading, setLoading] = useState(false);
+
   const { recipeId } = useParams();
 
   useEffect(() => {
     const apiUrl = `https://cooking-blogs.onrender.com/api/recipes/${recipeId}`;
+    setLoading(true);
     fetch(apiUrl)
       .then((response) => response.json())
-      .then((data) => setRecipeSuggestions(data))
-      .catch((error) => console.error("Error fetching data:", error));
+      .then((data) => {
+        setRecipeSuggestions(data);
+        setLoading(false);
+      })
+      .catch((error) => {
+        setLoading(false);
+        console.error("Error fetching data:", error);
+      });
   }, [recipeId]);
+
   return (
     <div>
       <Navbar />
-      <RecipeSectionFirst data={RecipeSuggestions} />
-      <IngredientsandRecipe dataFromAPI={RecipeSuggestions} />
+      {loading ? (
+        <LoaderComp />
+      ) : (
+        <>
+          <RecipeSectionFirst data={RecipeSuggestions} />
+          <IngredientsandRecipe dataFromAPI={RecipeSuggestions} />
+        </>
+      )}
 
       <DelicacyRepeat />
       <LikeRecipe />
