@@ -28,16 +28,19 @@ const MainSectionBlogPage = () => {
       id: 1,
       image: "/Assets/meatballs.png",
       title: "Chicken Meatball with Creamy Cheese",
+      author: "Andeas Smith",
     },
     {
       id: 2,
       image: "/Assets/tacoMeat.png",
       title: "The Creamiest Creamy Chicken",
+      author: "Andeas Smith",
     },
     {
       id: 3,
       image: "/Assets/potChicken.png",
       title: "The Best Easy One Pot Chicken and Rice",
+      author: "Andeas Smith",
     },
   ];
 
@@ -62,7 +65,12 @@ const MainSectionBlogPage = () => {
                         {item?.Author?.lastName}
                       </h5>
                     </div>
-                    <p>Date: {moment(item?.Author?.createdAt).format("MM/MM/YYYY")}</p>
+                    <div className="published">
+                      <p>
+                        Date:{" "}
+                        {moment(item?.Author?.createdAt).format("MM/MM/YYYY")}
+                      </p>
+                    </div>
                   </div>
                 </div>
               </Link>
@@ -75,7 +83,10 @@ const MainSectionBlogPage = () => {
             {recipeData.map((recipe) => (
               <div className="rightRecipeDish" key={recipe.id}>
                 <img src={recipe.image} alt={recipe.title} />
-                <h2>{recipe.title}</h2>
+                <div className="titleauthorright">
+                  <h2>{recipe.title}</h2>
+                  <p> By {recipe.author}</p>
+                </div>
               </div>
             ))}
           </div>

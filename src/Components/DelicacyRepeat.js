@@ -7,30 +7,25 @@ const DelicacyRepeat = () => {
       <div className="delicacy-container">
         <div className="heading">
           <h1>Deliciousness to your inbox</h1>
+          <p>
+            Lorem ipsum dolor sit amet, consectetuipisicing elit, sed do eiusmod
+            tempor incididunt ut labore et dolore magna aliqut enim ad minim
+          </p>
         </div>
-        <p>
-          Lorem ipsum dolor sit amet, consectetuipisicing elit, sed do eiusmod
-          tempor incididunt ut labore et dolore magna aliqut enim ad minim
-        </p>
-
         <div className="email-container">
-          {/* <div className="border"> */}
-          {/* <input
-                type="email"
-                className="email"
-                placeholder="Your email address..."
-              />
-              <div className="submitButton">
-                <button>Submit</button>
-              </div> */}
-          {/* </div> */}
-
           <div className="sideCard">
             <EmailValidation placeholder="Your email address..." />
-            <img src={"/Assets/mixedSalad.png"} alt="baked chicken" />
-
+            <img
+              src={"/Assets/mixedSalad.png"}
+              id="salad"
+              alt="baked chicken"
+            />
             <img src={"/Assets/flower.png"} id="flower" alt="baked chicken" />
-            <img src={"/Assets/Photoplate.png"} alt="baked chicken" />
+            <img
+              src={"/Assets/Photoplate.png"}
+              id="photoplate"
+              alt="baked chicken"
+            />
           </div>
         </div>
       </div>

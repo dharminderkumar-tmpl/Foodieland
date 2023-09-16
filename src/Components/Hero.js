@@ -10,40 +10,64 @@ const Hero = () => {
     dots: true,
     infinite: true,
     speed: 100,
-
     slidesToShow: 1,
     slidesToScroll: 1,
   };
+
   return (
-    <div>
-      <Slider {...settings} className="slider">
-        {array.map((e) => (
-          <div key={e} className="hero-container">
-            <div className="herolefttext">
-              <h1>Spicy delicious chicken wings</h1>
-              <p>
-                Lorem ipsum dolor sit amet, consectetuipisicing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqut enim
-                ad minim
-              </p>
-              <button className="blackbg">
-                <div className="viewrecipe">
-                  <div className="textrecipeban">
-                    <h3>View Recipe</h3>
-                  </div>
-                  <div className="iconban">
-                    <img src={"/Assets/play3.png"} />
+    // <div className="hero-wrapper">
+    <Slider {...settings} className="slider">
+      {array.map((e) => (
+        <div key={e} className="hero-container">
+          <div className="herolefttext">
+            <h1>Spicy delicious chicken wings</h1>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            </p>
+            <div className="timerdiv">
+              <div className="timer timefork" id={"fork"}>
+                <img src={"/Assets/timer.png"} alt="Timer" />
+                <div className="snack">30 min</div>
+              </div>
+              <div className="forknife timefork" id={"fork"}>
+                <img src={"/Assets/fork.png"} alt="Fork" />
+                <div className="snack">Snack</div>
+              </div>
+            </div>
+            <div className="specificimgdetails" id="data">
+              <div className="flexalldatarecipe">
+                <div className="imageauthor">
+                  <img src="/Assets/man.png" alt="Author" />
+                  <div className="flexnamedate">
+                    <h5>Jan Doe</h5>
+                    <p>9 Nov 2023</p>
                   </div>
                 </div>
-              </button>
-            </div>
-            <div className="herorightimage">
-              <img src={"/Assets/baked-chicken.png"} alt="baked chicken" />
+              </div>
+              <div className="recipebutton">
+                <a href="#recipe">
+                  <button className="blackbg">
+                    <div className="viewrecipe">
+                      <div className="textrecipeban">
+                        <h3>View Recipe</h3>
+                      </div>
+                      <div className="iconban">
+                        <img src={"/Assets/play3.png"} alt="Play Icon" />
+                      </div>
+                    </div>
+                  </button>
+                </a>
+              </div>
             </div>
           </div>
-        ))}
-      </Slider>
-    </div>
+          <div className="herorightimage">
+            <img src={"/Assets/baked-chicken.png"} alt="baked chicken" />
+          </div>
+        </div>
+      ))}
+    </Slider>
+    // </div>
   );
 };
 

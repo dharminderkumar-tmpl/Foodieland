@@ -1,7 +1,7 @@
 import "../App.css";
 
 import React from "react";
-
+import moment from "moment";
 const BlogPostPageblogs = ({ blogData }) => {
   return (
     <div>
@@ -15,7 +15,7 @@ const BlogPostPageblogs = ({ blogData }) => {
               {blogData?.Author?.lastName}
             </h3>
           </div>
-          <p>{blogData?.createdAt}</p>
+          <p>Published on:{moment(blogData?.createdAt).format("MM/MM/YYYY")}</p>
         </div>
         <p>{blogData?.shortDescription}</p>
         <img src={blogData?.image} alt="Blog Banner" />
