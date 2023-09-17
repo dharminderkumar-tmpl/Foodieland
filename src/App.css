@@ -15,9 +15,10 @@ body{
 .navbar{ 
   width: 100vw;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-evenly;
   align-items: center;
   margin-top: 34px;
+  gap: 12%;
   padding-bottom: 34px;
   border-bottom: 2px solid rgba(0, 0, 0, 0.10);;
 }
@@ -130,10 +131,11 @@ body{
   background-color: #E7FAFE;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-around;
+  padding-left: 52px;
 }
 .herolefttext p{
-  text-align: center;
+  /* text-align: center; */
   margin-top: 25px;
   color: rgba(0, 0, 0, 0.60);
 font-family: Inter;
@@ -158,10 +160,11 @@ line-height: 28px; /* 175% */
 }
 
 .herolefttext h1{
-  text-align: center;
+  /* text-align: center; */
   color: #000;
 font-family: Inter;
 font-size: 64px;
+padding-left: 0 !important;
 font-style: normal;
 font-weight: 600;
 line-height: normal;
@@ -183,11 +186,12 @@ letter-spacing: -2.56px;
 .hero-container {
   display: flex !important;
   
-  border-radius: 10px !important;
-  width: auto !important;
-  padding: 30px;
-  margin: 10px 30px;
+  border-radius: 20px !important;
+  width: 90% !important;
+  /* padding: 30px; */
+  margin: 10px 68px;
   margin-top: 50px;
+  overflow: hidden;
 }
 
 .leftHeroPage h1 {
@@ -216,11 +220,14 @@ letter-spacing: -2.56px;
 
 @media only screen and (min-width: 200px )and (max-width:767px){
   .hero-container {
-    width: 100%;
-    
+    width: 100% !important;
+    margin: 0 !important;
     overflow: hidden;
     padding: 0 !important;
     border-radius: 1.25rem;
+}
+.carpet{
+  display: none!important;
 }
 .container{
   padding: 0 !important;
@@ -280,7 +287,7 @@ letter-spacing: -2.56px;
 .catImg {
   display: flex;
   justify-content: center;
-  gap: 110px;
+  gap: 9.3%;
   margin-top: 2.5rem;
 }
 
@@ -304,7 +311,7 @@ text-align: left;
 }
 
 .card img {
-  border-radius: 20px 20px 0 0;
+  border-radius: 20px ;
   max-height: 300px;
   height: 100%;
   width: 100%;
@@ -333,7 +340,7 @@ font-weight: 600;
   border-radius: 16px;
 background: #E7FAFE;
 padding: 5px 10px 5px 10px;
-margin-right: 11.875rem;
+margin-right: 5.875rem;
 cursor: pointer;
 }
 
@@ -344,7 +351,7 @@ font-size: 48px;
 font-style: normal;
 font-weight: 600;
 line-height: normal;
-margin-left: 11.438rem;
+margin-left: 4.40rem;
 flex-wrap: wrap;
 }
 @media (max-width: 768px)  {
@@ -391,14 +398,39 @@ flex-wrap: wrap;
 .recipe{
   padding: 4.2rem;
 }
+#directions{
+  margin-top: 20px;
+}
+.carpet{
+  display: flex;
+  /* background-color: white; */
+  /* width: -moz-fit-content; */
+  border: 1px solid white;
+    width: 17%;
+    border-radius: 20px;
+    padding: 8px;
+  /* width: fit-content; */
+  /* border-radius: 20px; */
+  /* height: 30px; */
+  background-color: white;
+  align-items: center;
+  font-family: Inter;
+font-size: 14px;
+font-weight: 600;
+line-height: 17px;
+letter-spacing: -0.02em;
+text-align: left;
+gap: 4px;
+}
 .card{
 margin: 20px 0;
 position: relative;
-flex-basis: 30%;
+flex-basis: 28%;
 height: 470px;
+/* width: 270px; */
 padding: 1.25rem;
 text-align: center;
-padding: 0;
+/* padding: 0; */
 border-radius: 30px;
 background: linear-gradient(180deg, rgba(231, 249, 253, 0.00) 0%, #E7F9FD 100%);
 box-shadow: 0px 0px 10px 3px lightblue;
@@ -426,9 +458,10 @@ text-align: center;
 text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 font-family: Inter;
 font-size: 16px;
+padding-inline: 18 rem;
 font-style: normal;
 font-weight: 400;
-text-transform: uppercase;
+text-transform: lowercase;
 line-height: 28px; /* 175% */
 }
 
@@ -549,7 +582,7 @@ line-height: normal;
 letter-spacing: -1.92px;
 text-align: left;
 margin-top: 50px;
-margin-left: 30px;
+/* margin-left: 30px; */
 }
 
 .recipetitle1 p{
@@ -588,6 +621,8 @@ letter-spacing: -0.72px;
     }
     .recipe1{
       padding: 0 !important;
+      margin-left: 0!important;
+      width: 100% !important;
     }
 }
 
@@ -757,15 +792,15 @@ width: 100%;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 20px;
-  padding: 2rem;
-  padding-inline: 73px;
+  gap: 25px;
+  /* padding: 2rem; */
+  /* padding-inline: 73px; */
   
 }
 .leftChefPage button{
   border: none;
   outline: none;
-  border-radius: 24px;
+  border-radius: 10px;
   background-color: #000;
   color: #FFF;
   padding: 10px 24px 10px 24px;
@@ -795,7 +830,8 @@ background: linear-gradient(180deg, rgba(231, 249, 253, 0.00) 0%, #E7F9FD 100%);
 
 .chef-container {
   display: flex;
-  width: 90%;
+  width: 92%;
+  margin-left: 32px;
   border-radius: 3rem;
   overflow: hidden;
 }
@@ -833,6 +869,9 @@ background: linear-gradient(180deg, rgba(231, 249, 253, 0.00) 0%, #E7F9FD 100%);
   .chef-main {
     width: 100vw;
     display: flex;
+  }
+  .Chef-main{
+    margin-left: 0!important;
   }
   .specificimgdetails{
     flex-direction: column;
@@ -1001,7 +1040,9 @@ letter-spacing: -0.36px;
 
 .Chef-main{
   display: flex;
-  justify-content: center;
+  /* justify-content: center; */
+  width: 96%;
+  margin-left: 52px;
 }
 
 
@@ -1147,7 +1188,7 @@ line-height: 28px; /* 175% */
 }
 .recipemain {
   display: flex;
-  margin-top: 262px;
+  margin-top: 180px;
   justify-content: flex-end;
   gap: 30px;
   flex-direction: column;
@@ -1408,7 +1449,8 @@ hr{
 
 }
 .recipe1 {
-  width: 95%;
+  width: 90%;
+  margin-left: 35px;
   padding: 2rem;
   /* padding-right: 2rem; */
 }
@@ -1420,6 +1462,39 @@ hr{
   .recipetitle1{
     display: flex;
     flex-direction: column;
+  }
+  .mobileMenuIcon {
+    display: none;
+    cursor: pointer;
+  }
+  
+  .bar {
+    width: 25px;
+    height: 3px;
+    background-color: #333;
+    margin: 4px 0;
+    transition: 0.4s;
+  }
+  
+  .navbar.open .mobileMenuIcon {
+    display: block;
+  }
+  
+  .navbar.open .mid {
+    display: block;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    right: 0;
+    background-color: #fff; 
+    z-index: 999;
+    border-radius: 0 0 15px 15px; 
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  }
+  
+  .navbar.open .rightSide {
+    display: flex;
+    justify-content: center;
   }
   .recipetitle1 h1 {
     font-size: 34px;
@@ -1653,6 +1728,9 @@ line-height: 28px; /* 175% */
   font-style: normal;
   font-weight: 400;
   line-height: 21px;
+}
+.navbar .mid {
+  display: none; 
 }
 .textblog h2 {
   color: #000;
@@ -2061,6 +2139,14 @@ text-transform: uppercase;
   margin-top: 20px;
   object-fit: cover;
 }
+#fork{
+  
+    border: 0.3px solid #00000040;
+    border-radius: 20px;
+    box-shadow: 0px 4px 4px 0px #00000040;
+    padding: 8px;
+
+}
 .timerdiv{
   display: flex;
   gap: 10px;
@@ -2103,8 +2189,14 @@ text-align: left;
 
 @media only screen and (min-width: 200px )and (max-width:767px){
   .mainBannerPost img{
-    width: 90%;
+    width: 100%;
     max-height: 21rem;
+  }
+  .navbar{
+    border-bottom: 0;
+  }
+  .mainflexdiv{
+    flex-direction: column;
   }
   .mainsectionblogs a{
     flex-direction: column;
@@ -2119,7 +2211,7 @@ text-align: left;
   }
   .blogans img{
     width: 100%;
-    margin-left: 35px;
+    /* margin-left: 35px; */
  }
  .socialmedia {
   display: flex;
@@ -2128,7 +2220,7 @@ text-align: left;
 .social-social {
   
   flex-direction: row;
-  gap: 20px;
+  justify-content: space-around;
 }
 .mainBannerPost h1{
   font-size: 30px;
@@ -2191,7 +2283,7 @@ text-align: left;
   /* width: 20px; */
 }
 .imageauthor img{
-  width: 20px;
+  width: 30px;
   border-radius: 50%;
 }
 .imageauthor h5{
@@ -2293,6 +2385,16 @@ a{
   .emailformsubmit {
     left: 14%;
     top: 59%;
+}
+.postpageauthor{
+  flex-direction: column;
+  align-items: center;
+}
+.mainBannerPost p{
+  padding: 0;
+}
+.secondbanner{
+  flex-direction: column;
 }
 .border{
   width: 170% !important;
@@ -2435,7 +2537,7 @@ margin-bottom: 20px;
 .icon-button {
   position: absolute; 
   top: 26px; 
-  right: 18px; 
+  right: 28px; 
   border: 0;
   background-color: #fff;
   border-radius: 50%;

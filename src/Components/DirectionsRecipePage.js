@@ -7,7 +7,7 @@ const DirectionsRecipePage = ({ dataFromAPI }) => {
       <div className="leftmainDishDirection">
         <h2>Directions</h2>
         {dataFromAPI?.directions?.map((item, index) => (
-          <div className="Directiontomake textdir" key={index}>
+          <div className="Directiontomake textdir" id="directions" key={index}>
             <span>
               {index + 1 + " . "}
               {item.name}

@@ -20,11 +20,17 @@ const Hero = () => {
       {array.map((e) => (
         <div key={e} className="hero-container">
           <div className="herolefttext">
-            <h1>Spicy delicious chicken wings</h1>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua.
-            </p>
+            <div className="carpet">
+              <img src={"/Assets/carpet.png"} alt="Fork" />
+              <div>Hot recipes</div>
+            </div>
+            <div className="herotext">
+              <h1>Spicy delicious chicken wings</h1>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              </p>
+            </div>
             <div className="timerdiv">
               <div className="timer timefork" id={"fork"}>
                 <img src={"/Assets/timer.png"} alt="Timer" />
