@@ -63,7 +63,7 @@ const LikeRecipe = () => {
               <p className="card_name1">{data.title}</p>
               <div className="timerdiv">
                 <div className="timer timefork">
-                  <img src="/Assets/timer.png" alt="Timer" />
+                  <img src="/Assets/Timer.png" alt="Timer" />
                   <p>30 min</p>
                 </div>
                 <div className="forknife timefork">
