@@ -618,6 +618,7 @@ letter-spacing: -0.72px;
     }
     .card{
       width: 100%;
+      padding: 0;
     }
     .card1 img{
       width: 100%;
@@ -1194,7 +1195,7 @@ line-height: 28px; /* 175% */
 }
 .recipemain {
   display: flex;
-  margin-top: 180px;
+  margin-top: 240px;
   justify-content: flex-end;
   gap: 30px;
   flex-direction: column;

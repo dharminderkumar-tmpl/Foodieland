@@ -33,7 +33,7 @@ const Hero = () => {
             </div>
             <div className="timerdiv">
               <div className="timer timefork" id={"fork"}>
-                <img src={"/Assets/timer.png"} alt="Timer" />
+                <img src={"/Assets/Timer.png"} alt="Timer" />
                 <div className="snack">30 min</div>
               </div>
               <div className="forknife timefork" id={"fork"}>
