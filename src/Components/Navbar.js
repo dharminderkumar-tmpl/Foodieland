@@ -1,20 +1,34 @@
-import React from "react";
+import React, { useState } from "react";
 import { NavLink, Link } from "react-router-dom";
+
 const openInNewTab = (url) => {
   window.open(url, "_blank", "noreferrer");
 };
+
 function Navbar() {
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setMenuOpen(!menuOpen);
+  };
+
   return (
-    <div className="navbar">
+    <div className={`navbar ${menuOpen ? "open" : ""}`}>
       <div className="leftSide">
         <Link to={"/"}>
-          <img src={"/Assets/logo.png"} />
+          <img src={"/Assets/logo.png"} alt="Logo" />
         </Link>
       </div>
-      <div className="mid">
+
+      <div className="mobileMenuIcon" onClick={toggleMenu}>
+        <div className={`bar ${menuOpen ? "open" : ""}`}></div>
+        <div className={`bar ${menuOpen ? "open" : ""}`}></div>
+        <div className={`bar ${menuOpen ? "open" : ""}`}></div>
+      </div>
+
+      <div className={`mid ${menuOpen ? "open" : ""}`}>
         <ul className="navItems">
           <nav id="homebtn">
-            {" "}
             <NavLink to={"/"}>Home</NavLink>
           </nav>
           <a href="#recipe">Recipe</a>
@@ -24,23 +38,19 @@ function Navbar() {
           <nav id="contactbtn">
             <NavLink to={"/Contact"}>Contact</NavLink>
           </nav>
-          {/* <nav id='aboutusbtn'><NavLink to={'/AboutUs'}>About Us</NavLink></nav> */}
         </ul>
       </div>
 
-      <div className="rightSide">
+      <div className={`rightSide ${menuOpen ? "open" : ""}`}>
         <button onClick={() => openInNewTab("https://www.facebook.com/")}>
-          <img src={"/Assets/fb.png"} />
+          <img src={"/Assets/fb.png"} alt="Facebook" />
         </button>
         <button onClick={() => openInNewTab("https://www.twitter.com/")}>
-          <img src={"/Assets/twitter.png"} />
+          <img src={"/Assets/twitter.png"} alt="Twitter" />
         </button>
         <button onClick={() => openInNewTab("https://www.instagram.com/")}>
-          <img src={"/Assets/instagram.png"} />
+          <img src={"/Assets/instagram.png"} alt="Instagram" />
         </button>
-
-        {/* <img src={twitter}/>
-        <img src={instagram}/> */}
       </div>
     </div>
   );
