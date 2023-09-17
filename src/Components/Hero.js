@@ -24,6 +24,9 @@ const Hero = () => {
               <img src={"/Assets/carpet.png"} alt="Fork" />
               <div>Hot recipes</div>
             </div>
+            <div className="badge">
+              <img src={"/Assets/badge.png"} />
+            </div>
             <div className="herotext">
               <h1>Spicy delicious chicken wings</h1>
               <p>
