@@ -2368,6 +2368,7 @@ text-align: left;
 }
 .mainBannerPost h1{
   font-size: 30px;
+  letter-spacing:0;
 }
 }
 

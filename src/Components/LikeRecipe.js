@@ -3,17 +3,17 @@ import React, { useState } from "react";
 const dummyData = [
   {
     id: 1,
-    title: "Mixed Tropical Fruit Superfood Boosts",
+    title: "Healthy Japanese Fried Rice with Asparagus",
     image: "/Assets/vegSalad.png",
   },
   {
     id: 2,
-    title: "Big and Juicy Wagyu Beef Cheeseburger",
+    title: "Healthy Japanese Fried Rice with Asparagus",
     image: "/Assets/beef.png",
   },
   {
     id: 3,
-    title: "Chicken Meatballs with Cream Cheese",
+    title: "Healthy Japanese Fried Rice with Asparagus",
     image: "/Assets/beef.png",
   },
   {
