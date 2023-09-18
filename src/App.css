@@ -64,8 +64,12 @@ body{
     text-shadow: 1px 3px 3.5px rgba(0,0,0,0.55);
     
 }
+.insideleftnav{
+  margin-left: 0;
+}
 .navbar .mid{
   display: none;
+  margin-left: 0;
 }
 
 .midrightnav{
