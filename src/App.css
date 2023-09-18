@@ -18,11 +18,43 @@ body{
   justify-content: space-evenly;
   align-items: center;
   margin-top: 34px;
-  gap: 12%;
+  /* gap: 12%; */
+  background-color: #fff;
   padding-bottom: 34px;
   border-bottom: 2px solid rgba(0, 0, 0, 0.10);;
 }
-@media only screen and (min-width: 200px )and (max-width:767px){
+.insideleftnav{
+  width: 65%;
+  margin-left: 4rem;
+}
+.mid {
+  display: flex;
+  justify-content: space-between;
+  width: 34%;
+}
+
+.hamburgernav{
+  display: none;
+  width: 100%;
+  position: absolute;
+  top: -100%;
+  z-index: 1;
+  transition: all .3s ease-in-out;
+}
+.toggle{
+  display: none;
+}
+.mid .navItems {
+  display: flex;
+  align-self: center;
+  gap: 45px;
+}
+.midrightnav{
+  display: flex;
+  width: 100%;
+  gap: 40%;
+}
+@media only screen and (min-width: 200px )and (max-width:768px){
   .navbar.mid ul {
     list-style: none;
     font-family: 'Inter', sans-serif;
@@ -30,7 +62,68 @@ body{
     font-size: 13px;
     line-height: 16.36px;
     text-shadow: 1px 3px 3.5px rgba(0,0,0,0.55);
+    
 }
+.navbar .mid{
+  display: none;
+}
+
+.midrightnav{
+  display: none;
+}
+
+
+.hamburgernav {
+  display: block;
+  background-color:  #fff;
+}
+
+.toggle {
+  display: block;
+  background-color: #333; 
+  border-radius: 10px;
+  color: white; 
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  
+}
+.card img{
+  /* width: 87%!important; */
+  max-height: 191px !important;
+}
+
+.sidebar{
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.menu-nav {
+ display: block;
+
+}
+.menu-nav li{
+  list-style: none;
+  padding: 20px;
+}
+a{
+  font-family: Inter;
+font-size: 16px;
+font-weight: 500;
+line-height: 19px;
+letter-spacing: -0.02em;
+text-align: left;
+color:  #000000;
+padding: 20px;
+
+}
+
+
+.show-menu {
+  top: 10% !important;
+}
+
 .navbar .mid .navItems {
   display: flex;
   align-self: center;
@@ -40,10 +133,13 @@ body{
 .navbar {
   width: 100vw;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-around;
   align-items: center;
-  margin-top: 10px;
-  flex-direction: column;
+  margin-top: 0;
+  padding-block: 20px;
+  position: relative;
+  z-index: 2;
+  /* flex-direction: column; */
 }
 .navbar .mid{
   margin-top: 10px;;
@@ -52,6 +148,7 @@ body{
     display: flex;
     gap: 30px;
     margin-top: 19px;
+
 
 }
 }
@@ -62,6 +159,8 @@ body{
     gap: 45px;
 }
 }
+
+
 #homebtn a.active{
   border-bottom:2px solid #000;
 }
@@ -116,6 +215,9 @@ body{
   text-decoration: none;
   color: #000000;
 }
+.mid .navItems a:active{
+  border-bottom: 2px solid #000000;
+}
  
 /* HeroSection */
 
@@ -168,7 +270,7 @@ padding-left: 0 !important;
 font-style: normal;
 font-weight: 600;
 line-height: normal;
-letter-spacing: -2.56px;
+/* letter-spacing: -2.56px; */
 }
 .rightHeroPage {
   object-fit: contain;
@@ -215,7 +317,12 @@ letter-spacing: -2.56px;
 }
 
 
-
+@media only screen and (min-width: 200px )and (max-width:500px) {
+ .card img{
+  height: 0;
+  width: 0;
+ } 
+}
 
 
 @media only screen and (min-width: 200px )and (max-width:767px){
@@ -225,6 +332,10 @@ letter-spacing: -2.56px;
     overflow: hidden;
     padding: 0 !important;
     border-radius: 1.25rem;
+}
+.card a{
+  display: flex;
+  padding: 0;
 }
 .carpet{
   display: none!important;
@@ -247,6 +358,10 @@ letter-spacing: -2.56px;
   font-weight: 400;
   line-height: 28px;
   display: contents;
+}
+
+.herolefttext{
+  padding: 2rem;
 }
 .herolefttext h1{
   font-size: 30px;
@@ -496,7 +611,9 @@ letter-spacing: -0.96px;
         padding: 0;
         /* padding-inline: 1rem; */
     }
-    
+    #recipe{
+      padding: 0;
+    }
     .Main {
       /* width: 100vw; */
       display: flex;
@@ -699,7 +816,7 @@ letter-spacing: -1.92px;
     width: 40%;
 }
 #photoplate{
-  height: 14rem;
+  height: 16rem;
 }
 .emailformsubmit img{
   
@@ -755,14 +872,18 @@ width: 100%;
 
 @media only screen and (min-width: 200px )and (max-width:767px) {
   .delicacy-container h1{
-  text-align: center;
+  text-align: left !important;
     color: #000;
     font-family: Inter;
     font-size: 32px;
     font-style: normal;
+    margin-top: 0 !important;
     font-weight: 600;
     line-height: normal;
     letter-spacing: -1.92px;
+}
+.heading{
+  padding: 20px;
 }
 .sideCard img{
   overflow: hidden;
@@ -878,6 +999,9 @@ background: linear-gradient(180deg, rgba(231, 249, 253, 0.00) 0%, #E7F9FD 100%);
     width: 100vw;
     display: flex;
   }
+  .footer-menu ul {
+    gap: 0 !important;
+  }
   .Chef-main{
     margin-left: 0!important;
   }
@@ -942,7 +1066,7 @@ background: linear-gradient(180deg, rgba(231, 249, 253, 0.00) 0%, #E7F9FD 100%);
 
 .footer-content {
   display: flex;
-  flex-wrap: wrap;
+  /* flex-wrap: wrap; */
   justify-content: space-between;
   /* align-items: flex-end; */
   flex: 1;
@@ -1235,6 +1359,11 @@ line-height: 28px; /* 175% */
     object-fit: unset;
     border-radius: 25px;
     /* border: 1px solid red; */
+}
+.hero-container{
+  margin: 10px 23px;
+  padding: 0!important;
+  border-radius: 20px!important;
 }
 .card{
   flex-basis: 40%;
@@ -1812,7 +1941,7 @@ line-height: 28px; /* 175% */
   /* height: 70vh; */
   padding-bottom: 80px;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-around;
   /* flex-direction: column; */
 }
 .inputForm h1 {
