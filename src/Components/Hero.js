@@ -9,7 +9,10 @@ const Hero = () => {
   const settings = {
     dots: true,
     infinite: true,
-    speed: 100,
+    autoplay: true,
+    autoplaySpeed: 5000,
+    pauseOnHover: true,
+    speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
   };

@@ -8,7 +8,7 @@ const LoaderComp = () => {
       alignments="center"
       horizontalAlign="left"
       ariaLabel="tail-spin-loading"
-      radius="1"
+      radius="0.2"
       wrapperStyle={{}}
       wrapperClass=""
       visible={true}
