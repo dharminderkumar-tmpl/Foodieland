@@ -42,7 +42,7 @@ const LikeRecipe = () => {
               <img src={data.image} alt="salad" />
               <button
                 onClick={handleButtonClick}
-                className={`icon-button ${isClicked ? "clicked" : ""}`}
+                className={`icon-button1 ${isClicked ? "clicked" : ""}`}
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"

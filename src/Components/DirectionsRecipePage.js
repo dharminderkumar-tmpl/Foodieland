@@ -12,11 +12,9 @@ const DirectionsRecipePage = ({ dataFromAPI }) => {
               {index + 1 + " . "}
               {item.name}
             </span>{" "}
-            <p className="textdir">
-              {item.description}
-              <hr />
-            </p>
+            <p className="textdir">{item.description}</p>
             {item.image && <img src={item.image} alt="salad" />}
+            <hr />
           </div>
         ))}
       </div>

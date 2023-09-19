@@ -31,7 +31,7 @@ const RecipeSectionFirst = ({ data }) => {
         </div>
         <div className="flexalldatarecipe">
           <div className="imageauthor">
-            <img src="/Assets/Timer.png" />
+            <img src="/Assets/Timer.svg" />
             <div className="flexnamedate">
               <h5>PREP TIME</h5>
               <p>15 MIN</p>
@@ -40,7 +40,7 @@ const RecipeSectionFirst = ({ data }) => {
         </div>
         <div className="flexalldatarecipe">
           <div className="imageauthor">
-            <img src="/Assets/fork.png" />
+            <img src="/Assets/ForkKnife.svg" />
             <h5>Chicken</h5>
           </div>
         </div>

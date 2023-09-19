@@ -1218,7 +1218,7 @@ letter-spacing: -0.36px;
   margin-top: 50px;
   justify-content: center;  
   gap:30px;
-  padding: 0 20px 0 20px;
+  /* padding: 0 20px 0 20px; */
   max-height: 35rem;
 }
 .recipeImg{
@@ -1585,7 +1585,8 @@ line-height: normal;
 letter-spacing: -0.48px;
 }
 hr{
-  border: 1px solid rgba(0, 0, 0, 0.10);;
+  border: 1px solid rgba(0, 0, 0, 0.10);
+  margin-top: 20px;
 }
 .mainrecipe1{
   
@@ -2629,6 +2630,7 @@ letter-spacing: -0.28px;
   display: flex;
   justify-content: flex-end;
   margin-right: 50px;
+  width: 100%;
 }
 .icon{
   display: flex;
@@ -2648,14 +2650,20 @@ letter-spacing: 1.2px;
 }
 .smallericons {
   display: flex;
-  gap: 40%;
+  gap: 100%;
   justify-content: flex-end;
   align-items: center;
 }
 .iconinside{
-  background-color: #E7FAFE;
-  border-radius: 50%;
-  align-self: center;
+  width: 80px;
+  height: 80px;
+    background-color: #E7FAFE;
+    border-radius: 50%;
+    align-self: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
 }
 .titleauthorright p{
   color: rgba(0, 0, 0, 0.60);
@@ -2752,4 +2760,33 @@ margin-bottom: 20px;
     padding: 20px;
     border-radius: 20px;
   }
+  .icon-button1 {
+    position: absolute; 
+    top: 30px; 
+    right: 16px; 
+    border: 0;
+    background-color: #fff;
+    border-radius: 50%;
+    width: 2.5rem;
+    height: 2.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    font-size: 1.25rem;
+    transition: .25s ease;
+    box-shadow: 0 0 0 1px rgba(#000, .05), 0 3px 8px 0 rgba(#000, .15);
+    z-index: 1;
+    cursor: pointer;
+    color: #565656;
   
+    svg {
+      width: 1em;
+      height: 1em;
+    }
+  
+    &:hover, &:focus {
+      background-color: #EC4646;
+      color: #FFF;
+    }
+  }
