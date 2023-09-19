@@ -36,12 +36,12 @@ const Hero = () => {
             </div>
             <div className="timerdiv">
               <div className="timer timefork" id={"fork"}>
-                <img src={"/Assets/Timer.png"} alt="Timer" />
-                <div className="snack">30 min</div>
+                <img src={"/Assets/Timer.svg"} alt="Timer" />
+                <div className="snack">30 minutes</div>
               </div>
               <div className="forknife timefork" id={"fork"}>
-                <img src={"/Assets/fork.png"} alt="Fork" />
-                <div className="snack">Snack</div>
+                <img src={"/Assets/ForkKnife.svg"} alt="Fork" />
+                <div className="snack">Chicken</div>
               </div>
             </div>
             <div className="specificimgdetails" id="data">

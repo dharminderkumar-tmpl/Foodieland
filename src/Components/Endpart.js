@@ -87,11 +87,11 @@ const Endpart = () => {
             <p className="card_name1">{data.title}</p>
             <div className="timerdiv">
               <div className="timer timefork">
-                <img src="/Assets/Timer.png" alt="Timer" />
+                <img src="/Assets/Timer.svg" alt="Timer" />
                 <p>30 min</p>
               </div>
               <div className="forknife timefork">
-                <img src="/Assets/fork.png" alt="Fork" />
+                <img src="/Assets/ForkKnife.svg" alt="Fork" />
                 <p>Snack</p>
               </div>
             </div>

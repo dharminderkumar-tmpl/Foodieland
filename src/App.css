@@ -180,11 +180,7 @@ padding: 20px;
 #aboutusbtn a.active{
   border-bottom:2px solid #000;
 }
-.leftSide img{
-  -webkit-filter: drop-shadow(1px 3px 4px #222);
-  filter: drop-shadow(0 0 16px #222);
-  
-}
+
 
 .mid .navItems{
   display: flex;
@@ -237,7 +233,7 @@ padding: 20px;
   background-color: #E7FAFE;
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
+  justify-content: space-evenly;
   padding-left: 52px;
 }
 .herolefttext p{
@@ -291,7 +287,7 @@ line-height: normal;
 }
 .hero-container {
   display: flex !important;
-  
+  position: relative;
   border-radius: 20px !important;
   width: 90% !important;
   /* padding: 30px; */
@@ -406,7 +402,7 @@ line-height: normal;
 .catImg {
   display: flex;
   justify-content: center;
-  gap: 9.3%;
+  gap: 7.2%;
   margin-top: 2.5rem;
 }
 
@@ -424,16 +420,17 @@ font-style: normal;
 font-weight: 600;
 line-height: 32px; 
 letter-spacing: -0.96px;
-margin: 1rem;
+margin-top: 1rem;
 /* padding: 1.25rem; */
 text-align: left;
 }
 
 .card img {
   border-radius: 20px ;
-  max-height: 300px;
-  height: 100%;
-  width: 100%;
+  max-height: 250px;
+    height: 100%;
+    width: 100%;
+    max-width: 368px;
   background: linear-gradient(180deg, rgba(0, 0, 0, 0.00) 0%, rgba(0, 0, 0, 0.05) 100%);
   object-fit: cover;
 }
@@ -527,8 +524,10 @@ flex-wrap: wrap;
   border: 1px solid white;
     width: 17%;
     border-radius: 20px;
-    margin-top: 10px;
+    margin-top: 25px;
     padding: 8px;
+    box-shadow: 10px 20px 40px 0px rgba(41, 64, 70, 0.1);
+
   /* width: fit-content; */
   /* border-radius: 20px; */
   /* height: 30px; */
@@ -546,14 +545,14 @@ gap: 4px;
 margin: 20px 0;
 position: relative;
 flex-basis: 28%;
-height: 470px;
+height: 434px;
 /* width: 270px; */
 padding: 1.25rem;
 text-align: center;
 /* padding: 0; */
 border-radius: 30px;
 background: linear-gradient(180deg, rgba(231, 249, 253, 0.00) 0%, #E7F9FD 100%);
-box-shadow: 0px 0px 10px 3px lightblue;
+box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
 }
 .card a{
   text-decoration: none;
@@ -633,6 +632,7 @@ letter-spacing: -0.96px;
     width: 100%;
     /* align-items: center; */
     flex-direction: column;
+    /* position: relative; */
     /* overflow: hidden; */
     border-radius: 1.25rem !important;
 }
@@ -727,7 +727,7 @@ font-family: Inter;
 font-size: 18px;
 font-style: normal;
 font-weight: 600;
-padding: 0 14px 0 14px; ;
+/* padding: 0 14px 0 14px; ; */
 line-height: 26px; /* 144.444% */
 letter-spacing: -0.72px;
 }
@@ -1091,6 +1091,8 @@ background: linear-gradient(180deg, rgba(231, 249, 253, 0.00) 0%, #E7F9FD 100%);
 }
 .footer-container .footer-text{
   text-align: center;
+  display: flex;
+  justify-content: space-between;
   flex: 1;
 }
 .footer-menu ul{
@@ -1137,6 +1139,8 @@ letter-spacing: -0.32px;
   color: #000000;
 }
 .footer-text p{
+  width: 100%;
+  text-align: center;
   color: rgba(0, 0, 0, 0.60);
 text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 font-family: lobster;
@@ -2291,7 +2295,7 @@ text-transform: uppercase;
 .timerdiv{
   display: flex;
   gap: 10px;
-padding: 1rem;
+padding-top: 1rem;
   /* justify-content: center; */
 }
 .snack{
@@ -2325,7 +2329,7 @@ text-align: left;
   gap: 5px;
 }
 .timerdiv img{
-  width: 25%;
+  width: 24px;
 }
 
 @media only screen and (min-width: 200px )and (max-width:767px){
@@ -2428,7 +2432,7 @@ text-align: left;
   /* width: 20px; */
 }
 .imageauthor img{
-  width: 30px;
+  width: 50px;
   border-radius: 50%;
 }
 .imageauthor h5{
@@ -2603,7 +2607,7 @@ line-height: 28px; /* 175% */
 .flexalldatarecipe{
   display: flex;
   justify-content: flex-start;
-  margin-left: 25px;
+  /* margin-left: 25px; */
 }
 .mainflexdiv{
   display: flex;
@@ -2613,7 +2617,7 @@ line-height: 28px; /* 175% */
 .flexnamedate p{
   color: rgba(0, 0, 0, 0.60);
 font-family: Inter;
-font-size: 14px;
+font-size: 13px;
 font-style: normal;
 font-weight: 500;
 line-height: normal;
@@ -2684,8 +2688,8 @@ margin-bottom: 20px;
 
 .icon-button {
   position: absolute; 
-  top: 26px; 
-  right: 28px; 
+  top: 30px; 
+  right: 29px; 
   border: 0;
   background-color: #fff;
   border-radius: 50%;
@@ -2718,5 +2722,34 @@ margin-bottom: 20px;
     align-items: end;
 }
 .badge{
-  align-self: flex-end;
-}
+  position: absolute;
+    top: 46px;
+    left: 45%;
+  }
+
+
+  .Img1{
+    padding: 20px;
+    border-radius: 20px;
+  }
+  .Img2{
+    padding: 20px;
+    border-radius: 20px;
+  }
+  .Img3{
+    padding: 20px;
+    border-radius: 20px;
+  }
+  .Img4{
+    padding: 20px;
+    border-radius: 20px;
+  }
+  .Img5{
+    padding: 20px;
+    border-radius: 20px;
+  }
+  .Img6{
+    padding: 20px;
+    border-radius: 20px;
+  }
+  
