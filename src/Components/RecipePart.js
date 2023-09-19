@@ -52,12 +52,12 @@ const RecipePart = () => {
                 <h3>{data.title}</h3>
 
                 <div className="timerdiv " id="timeron">
-                  <div className="timer timefork">
-                    <img src={"/Assets/Timer.png"} alt="Timer" />
+                  <div className="timefork">
+                    <img src={"/Assets/Timer.svg"} alt="Timer" />
                     <p>30 min</p>
                   </div>
-                  <div className="forknife timefork">
-                    <img src={"/Assets/fork.png"} alt="Fork" />
+                  <div className="timefork">
+                    <img src={"/Assets/ForkKnife.svg"} alt="Fork" />
                     <p>Snack</p>
                   </div>
                 </div>
