@@ -54,6 +54,11 @@ body{
   width: 100%;
   gap: 40%;
 }
+@media only screen and (min-width: 767px )and (max-width:768px){
+  a{
+    padding-left: 0px !important;
+  }
+}
 @media only screen and (min-width: 200px )and (max-width:768px){
   .navbar.mid ul {
     list-style: none;
@@ -119,7 +124,10 @@ line-height: 19px;
 letter-spacing: -0.02em;
 text-align: left;
 color:  #000000;
-padding: 20px;
+padding-left: 20px;
+  padding-bottom: 20px;
+  padding-right: 20px;
+  padding-top: 20px;
 
 }
 
@@ -334,8 +342,11 @@ line-height: normal;
     border-radius: 1.25rem;
 }
 .card a{
-  display: flex;
+  /* display: flex; */
   padding: 0;
+}
+.timerdiv{
+  padding: 1rem;
 }
 .carpet{
   display: none!important;
@@ -473,10 +484,24 @@ flex-wrap: wrap;
 @media (max-width: 768px)  {
   .catImg{
     display: flex;
-    flex-direction: column;
+    /* flex-direction: column; */
+    flex-wrap: wrap;
     align-items: center;
     justify-content: center;
 
+}
+.footer-container .footer-text{
+  align-items: center;
+}
+.chef-container{
+  border-radius: 0 !important;
+  margin-left: 0!important;
+}
+.recipeCards1{
+  /* justify-content: left!important; */
+}
+.card{
+  height: 313px !important;
 }
 .categories {
   display: flex;
@@ -545,7 +570,7 @@ gap: 4px;
 margin: 20px 0;
 position: relative;
 flex-basis: 28%;
-height: 434px;
+height: 370px;
 /* width: 270px; */
 padding: 1.25rem;
 text-align: center;
@@ -677,6 +702,7 @@ letter-spacing: -0.96px;
 }
 .recipetitle1{
   display: flex;
+  gap: 22%;
   justify-content: flex-end;
 }
 .card1{
@@ -1359,7 +1385,7 @@ line-height: 28px; /* 175% */
   width: 100%;
 }
 }
-@media only screen and (min-width: 768px) and (max-width: 1023px) {
+@media only screen and (min-width: 767px) and (max-width: 1023px) {
   /* Styles for tablet devices */
   .recipemain .recipeImg img {
     width: 100%;
@@ -1367,6 +1393,11 @@ line-height: 28px; /* 175% */
     object-fit: unset;
     border-radius: 25px;
     /* border: 1px solid red; */
+}
+.badge {
+ 
+  top: 36% !important;
+  
 }
 .hero-container{
   margin: 10px 23px;
