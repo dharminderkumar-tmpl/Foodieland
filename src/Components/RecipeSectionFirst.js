@@ -29,27 +29,30 @@ const RecipeSectionFirst = ({ data }) => {
             </div>
           </div>
         </div>
+        <div class="vl"></div>
         <div className="flexalldatarecipe">
           <div className="imageauthor">
-            <img src="/Assets/Timer.svg" />
+            <img id="icook" src="/Assets/Timer.svg" />
             <div className="flexnamedate">
               <h5>PREP TIME</h5>
               <p>15 MIN</p>
             </div>
           </div>
         </div>
+        <div class="vl"></div>
         <div className="flexalldatarecipe">
           <div className="imageauthor">
-            <img src="/Assets/Timer.svg" />
+            <img id="icook" src="/Assets/Timer.svg" />
             <div className="flexnamedate">
               <h5>COOK TIME</h5>
               <p>15 MIN</p>
             </div>
           </div>
         </div>
+        <div class="vl"></div>
         <div className="flexalldatarecipe">
           <div className="imageauthor">
-            <img src="/Assets/ForkKnife.svg" />
+            <img id="icook" src="/Assets/ForkKnife.svg" />
             <h5>Chicken</h5>
           </div>
         </div>
