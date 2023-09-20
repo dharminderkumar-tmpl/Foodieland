@@ -1335,6 +1335,13 @@ line-height: 28px; /* 175% */
   /* gap: 2%; */
   
 }
+.RecipeRight1{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  /* gap: 2%; */
+  
+}
 @media only screen and (max-width: 767px) {
 
   .MainRecipeSectionFirst {
@@ -1781,11 +1788,8 @@ line-height: 28px; /* 175% */
   margin-left: 77px;
   margin-top: 37px;
 }
-.mainsectionblogs{
-  display: flex;
-  justify-content: space-between;
-  margin-top: 25px;
-}
+
+
 .mainsectionblogs:hover{
   cursor: pointer;
   color: #000;
@@ -2666,7 +2670,7 @@ letter-spacing: -0.28px;
   display: flex;
   justify-content: flex-end;
   margin-right: 50px;
-  width: 100%;
+  width: 98.5%;
 }
 .icon{
   display: flex;
