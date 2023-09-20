@@ -20,24 +20,19 @@ function EmailValidation({ placeholder }) {
   const validateEmail = (name, value) => {
     const emailRegex = /^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,4}$/;
 
-    if (name === "email") {
-      if (!value.trim()) {
-        setErrors({
-          ...errors,
-          [name]: "Email is required",
-        });
-      } else if (!emailRegex.test(value)) {
-        setErrors({
-          ...errors,
-          [name]: "Invalid email address",
-        });
-      } else {
-        setErrors({
-          ...errors,
-          [name]: "",
-        });
-      }
-    }
+    // if (name === "email") {
+    //   if (!value.trim()) {
+    //     setErrors({
+    //       ...errors,
+    //       [name]: "Email is required",
+    //     });
+    //   }  else {
+    //     setErrors({
+    //       ...errors,
+    //       [name]: "",
+    //     });
+    //   }
+    // }
   };
 
   const handleSubmit = (e) => {

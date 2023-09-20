@@ -23,16 +23,16 @@ function Navbar() {
         <div className="midrightnav">
           <div className="mid">
             <ul className="navItems">
-              <li>
+              <li id="homebtn">
                 <NavLink to={"/"}>Home</NavLink>
               </li>
-              <li>
+              <li id="recipebtn">
                 <a href="#recipe">Recipe</a>
               </li>
-              <li>
+              <li id="blogbtn">
                 <NavLink to={"/Blog"}>Blog</NavLink>
               </li>
-              <li>
+              <li id="contactbtn">
                 <NavLink to={"/Contact"}>Contact</NavLink>
               </li>
             </ul>
