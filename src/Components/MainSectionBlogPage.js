@@ -77,7 +77,7 @@ const MainSectionBlogPage = () => {
             </div>
           ))}
         </div>
-        <div className="RecipeRight">
+        <div className="RecipeRight1">
           <h1>Tasty Recipes</h1>
           <div className="rightRecipeDishmain">
             {recipeData.map((recipe) => (
