@@ -1,10 +1,6 @@
-import moment from "moment";
 import React, { useEffect, useState } from "react";
-
-import ReactPaginate from "react-paginate";
 import { Link } from "react-router-dom";
-
-// const items = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14];
+import moment from "moment";
 
 export function Items({ blogCards }) {
   return (
@@ -21,16 +17,18 @@ export function Items({ blogCards }) {
                 <p>{item?.shortDescription}</p>
                 <div className="createdate">
                   <div className="imageauthor">
-                    <img src={item?.Author?.image} />
+                    <img
+                      src={item?.Author?.image}
+                      alt={item?.Author?.firstName}
+                    />
                     <h5>
-                      {item?.Author?.firstName}
-                      {item?.Author?.lastName}
+                      {item?.Author?.firstName} {item?.Author?.lastName}
                     </h5>
                   </div>
                   <div className="published">
                     <p>
                       Date:{" "}
-                      {moment(item?.Author?.createdAt).format("MM/MM/YYYY")}
+                      {moment(item?.Author?.createdAt).format("MM/DD/YYYY")}
                     </p>
                   </div>
                 </div>
@@ -43,19 +41,22 @@ export function Items({ blogCards }) {
 }
 
 export function PaginatedItems({ itemsPerPage }) {
-  const [blogCards, setblogCards] = useState([]);
-  const [itemOffset, setItemOffset] = useState(0);
+  const [blogCards, setBlogCards] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
+  const recordsPerPage = 6;
+  const lastIndex = currentPage * recordsPerPage;
+  const firstIndex = lastIndex - recordsPerPage;
+  const records = blogCards.slice(firstIndex, lastIndex);
+  const npage = Math.ceil(blogCards.length / recordsPerPage);
+  const numbers = [...Array(npage + 1).keys()].slice(1);
 
-  const API =
-    "https://cooking-blogs.onrender.com/api/blogs/?pageNo={currentPage}";
+  const API = `https://cooking-blogs.onrender.com/api/blogs/?pageNo=${currentPage}`;
 
-  console.log(blogCards, "blog cards");
   const fetchBlogs = async (url) => {
     try {
       const res = await fetch(url).then((res) => res.json());
       if (res) {
-        setblogCards(res.blogs);
+        setBlogCards(res.blogs);
       }
     } catch (err) {
       console.error(err);
@@ -64,34 +65,48 @@ export function PaginatedItems({ itemsPerPage }) {
 
   useEffect(() => {
     fetchBlogs(API);
-  }, []);
+  }, [currentPage, API]);
 
-  const endOffset = itemOffset + itemsPerPage;
-  console.log(`Loading items from ${itemOffset} to ${endOffset}`);
-  const currentItems = blogCards.slice(itemOffset, endOffset);
-  const pageCount = Math.ceil(blogCards.length / itemsPerPage);
+  const changeCPage = (id) => {
+    setCurrentPage(id);
+  };
 
-  const handlePageClick = (event) => {
-    const newOffset = (event.selected * itemsPerPage) % blogCards.length;
-    console.log(
-      `User requested page number ${event.selected}, which is offset ${newOffset}`
-    );
-    setItemOffset(newOffset);
-    setCurrentPage(currentPage + 1);
+  const prePage = () => {
+    if (currentPage !== 1) {
+      setCurrentPage(currentPage - 1);
+    }
+  };
+
+  const nextPage = () => {
+    if (currentPage !== npage) {
+      setCurrentPage(currentPage + 1);
+    }
   };
 
   return (
     <>
-      <Items blogCards={blogCards} />
-      <ReactPaginate
-        breakLabel="..."
-        nextLabel="next >"
-        onPageChange={handlePageClick}
-        pageRangeDisplayed={5}
-        pageCount={pageCount}
-        previousLabel="< previous"
-        renderOnZeroPageCount={null}
-      />
+      <ul className="pagination">
+        <li className="page-item">
+          <a href="#" className="page-link" onClick={prePage}>
+            Prev
+          </a>
+        </li>
+        {numbers.map((n, i) => (
+          <li
+            className={`page-item ${currentPage === n ? "active" : ""}`}
+            key={i}
+          >
+            <a href="#" className="page-link" onClick={() => changeCPage(n)}>
+              {n}
+            </a>
+          </li>
+        ))}
+        <li className="page-item">
+          <a href="#" className="page-link" onClick={nextPage}>
+            Next
+          </a>
+        </li>
+      </ul>
     </>
   );
 }
