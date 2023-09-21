@@ -1,10 +1,12 @@
 import { React, useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import moment from "moment";
-
-const API = "https://cooking-blogs.onrender.com/api/blogs/";
+import Pagination, { PaginatedItems } from "./Pagination";
 
 const MainSectionBlogPage = () => {
+  const [currentPage, setCurrentPage] = useState(1);
+
+  const API = `https://cooking-blogs.onrender.com/api/blogs/?pageNo=${currentPage}`;
   console.log(API);
   const [users, setUsers] = useState([]);
 
@@ -21,7 +23,7 @@ const MainSectionBlogPage = () => {
 
   useEffect(() => {
     fetchBlogs(API);
-  }, []);
+  }, [currentPage]);
 
   const recipeData = [
     {
@@ -76,6 +78,8 @@ const MainSectionBlogPage = () => {
               </Link>
             </div>
           ))}
+
+          {/* <div id="container">{<PaginatedItems itemsPerPage={5} />}</div> */}
         </div>
         <div className="RecipeRight1">
           <h1>Tasty Recipes</h1>
@@ -92,6 +96,7 @@ const MainSectionBlogPage = () => {
           </div>
         </div>
       </div>
+      <div className="container"></div>
     </div>
   );
 };
