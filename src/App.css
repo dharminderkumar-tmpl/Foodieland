@@ -1856,6 +1856,7 @@ flex: 1;
   display: flex;
   text-decoration: none;
   cursor: pointer;
+  /* margin-bottom: 50px; */
 }
 .textblog{
   flex: 1;
@@ -2007,6 +2008,7 @@ line-height: 28px; /* 175% */
 }
 .pagination {
   display: flex;
+  gap: 21px;
   align-content: center;
   justify-content: center;
   /* margin-top: 25px; */
@@ -2543,7 +2545,7 @@ letter-spacing: -0.32px;
 
 .createdate{
   display: flex;
-  gap: 35%;
+  gap: 5%;
   margin-top: 18px;
 }
 .createdate  p{
@@ -2892,22 +2894,26 @@ margin-bottom: 20px;
 
 
   .page-item:disabled{
-    background-color: black;
-    color: white;
+    background-color: white;
+    color: gray;
     width: 64px;
     height: 64px;
     border-radius: 20px;
   }
-  .page-item{
+  .page-item {
     background-color: white;
     color: black;
-    width: 64px;
-    height: 64px;
+    /* gap: 6%; */
+    width: 58px;
+    display: flex;
+    height: 62px;
     border-radius: 20px;
-  }
- .page-item:active{
+    align-items: center;
+    justify-content: center;
+}
+ .black{
     background-color: black;
- 
+ color: #E7F9FD;
     width: 64px;
     height: 64px;
     border-radius: 20px;
@@ -2919,4 +2925,5 @@ margin-bottom: 20px;
  #container{
   display: flex;
   justify-content: flex-end;
+  margin-top: 50px;
  }
