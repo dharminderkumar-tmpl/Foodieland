@@ -11,11 +11,12 @@ const BlogPostPageblogs = ({ blogData }) => {
           <div className="imageauthor">
             <img src={blogData?.Author?.image} />
             <h3>
-              {blogData?.Author?.firstName}
+              {blogData?.Author?.firstName + " "}
               {blogData?.Author?.lastName}
             </h3>
           </div>
-          <p>Published on:{moment(blogData?.createdAt).format("MM/MM/YYYY")}</p>
+
+          <p>{moment(blogData?.createdAt).format("MM MMMM YYYY")}</p>
         </div>
         <p>{blogData?.shortDescription}</p>
         <img src={blogData?.image} alt="Blog Banner" />

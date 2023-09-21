@@ -2009,7 +2009,7 @@ line-height: 28px; /* 175% */
   display: flex;
   align-content: center;
   justify-content: center;
-  margin-top: 25px;
+  /* margin-top: 25px; */
 }
 .pagination a {
   color: black;
@@ -2266,6 +2266,7 @@ letter-spacing: -0.32px;
 .mainBannerPost{
   display: flex;
   flex-direction: column;
+  margin-top: 8%;
   justify-content: center;
 }
 .mainBannerPost h1{
@@ -2283,7 +2284,7 @@ letter-spacing: -2.56px;
 .mainBannerPost p {
   text-align: center;
   padding: 50px;
-  margin-top: 20px;
+  /* margin-top: 20px; */
   color: rgba(0, 0, 0, 0.60);
 /* text-align: center; */
 font-family: Inter;
@@ -2521,8 +2522,8 @@ text-align: left;
   /* width: 20px; */
 }
 .imageauthor img{
-  width: 40px;
-  height: 40px;
+  width: 40px !important;
+  height: 40px !important;
   border-radius: 50%;
 }
 #icook{
@@ -2557,7 +2558,7 @@ letter-spacing: -0.28px;
 }
 .postpageauthor{
   display: flex;
-  gap: 50%;
+  /* gap: 50%; */
   justify-content: center;
 }
 .postpageauthor h3{
@@ -2887,3 +2888,35 @@ margin-bottom: 20px;
   .vl{
     border: 1px solid rgba(0, 0, 0, 0.1)
   }
+
+
+
+  .page-item:disabled{
+    background-color: black;
+    color: white;
+    width: 64px;
+    height: 64px;
+    border-radius: 20px;
+  }
+  .page-item{
+    background-color: white;
+    color: black;
+    width: 64px;
+    height: 64px;
+    border-radius: 20px;
+  }
+ .page-item:active{
+    background-color: black;
+ 
+    width: 64px;
+    height: 64px;
+    border-radius: 20px;
+  }
+
+ #pageno:active{
+  background-color: red;
+ }
+ #container{
+  display: flex;
+  justify-content: flex-end;
+ }

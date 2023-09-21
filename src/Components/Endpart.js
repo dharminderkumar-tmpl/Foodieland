@@ -44,10 +44,19 @@ const dummyData = [
 ];
 
 const Endpart = () => {
-  const [isClicked, setIsClicked] = useState(false);
+  const [isClicked, setIsClicked] = useState({
+    id: [],
+  });
 
-  const handleButtonClick = () => {
-    setIsClicked(!isClicked);
+  const handleButtonClick = (id) => {
+    setIsClicked((prevIsClicked) => ({
+      id: [...prevIsClicked.id, id],
+    }));
+  };
+  const handleRemoveLink = (idToRemove) => {
+    setIsClicked((prevIsClicked) => ({
+      id: prevIsClicked.id.filter((id) => id !== idToRemove),
+    }));
   };
 
   return (
@@ -65,15 +74,16 @@ const Endpart = () => {
           <div className="card1" key={data.id}>
             <img src={data.image} alt="salad" />
             <button
-              onClick={handleButtonClick}
-              className={`icon-button1 ${isClicked ? "clicked" : ""}`}
+              onDoubleClick={() => handleButtonClick(data?.id)}
+              onClick={() => handleRemoveLink(data?.id)}
+              className="icon-button1"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="24"
                 height="24"
                 viewBox="0 0 24 24"
-                fill="red"
+                fill={isClicked.id.includes(data?.id) ? "red" : "gray"}
                 stroke=""
                 strokeWidth=""
                 strokeLinecap="round"
