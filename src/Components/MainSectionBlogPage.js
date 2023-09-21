@@ -1,18 +1,21 @@
 import { React, useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import moment from "moment";
-// import {/C}
-const API = "https://cooking-blogs.onrender.com/api/blogs/";
+import { Items, PaginatedItems } from "./Pagination";
+
+const API = "https://cooking-blogs.onrender.com/api/blogs/?pageNo=1";
 
 const MainSectionBlogPage = () => {
   console.log(API);
   const [users, setUsers] = useState([]);
+  const [totalBlogs, setTotalBlogs] = useState();
 
   const fetchBlogs = async (url) => {
     try {
       const res = await fetch(url).then((res) => res.json());
       if (res) {
         setUsers(res.blogs);
+        setTotalBlogs(res.totalBlogs);
       }
     } catch (err) {
       console.error(err);
@@ -61,14 +64,15 @@ const MainSectionBlogPage = () => {
                     <div className="imageauthor">
                       <img src={item?.Author?.image} />
                       <h5>
-                        {item?.Author?.firstName}
+                        {item?.Author?.firstName + " "}
                         {item?.Author?.lastName}
                       </h5>
                     </div>
+                    <div class="vl"></div>
                     <div className="published">
                       <p>
-                        Date:{" "}
-                        {moment(item?.Author?.createdAt).format("MM/MM/YYYY")}
+                        {" "}
+                        {moment(item?.Author?.createdAt).format("MM MMMM YYYY")}
                       </p>
                     </div>
                   </div>
@@ -76,9 +80,9 @@ const MainSectionBlogPage = () => {
               </Link>
             </div>
           ))}
-          {/* <div id="container">
-            <Pagination/>
-          </div> */}
+          <div id="container">
+            <PaginatedItems totalBlogs={totalBlogs} setUsers={setUsers} />
+          </div>
         </div>
         <div className="RecipeRight1">
           <h1>Tasty Recipes</h1>
@@ -95,7 +99,6 @@ const MainSectionBlogPage = () => {
           </div>
         </div>
       </div>
-      {/* <div className="container"></div> */}
     </div>
   );
 };
