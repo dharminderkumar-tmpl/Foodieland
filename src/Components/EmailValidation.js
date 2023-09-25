@@ -84,7 +84,7 @@ function EmailValidation({ placeholder }) {
           />
           {errors.email && <p className="error">{errors.email}</p>}
           <div className="submitButton">
-            <button type="submit">Submit</button>
+            <button type="submit">Subscribe</button>
           </div>
         </form>
       )}

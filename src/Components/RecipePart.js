@@ -30,7 +30,9 @@ const RecipePart = () => {
       <a id="recipe">
         <div className="recipetitle">
           <h1>Simple and tasty recipes</h1>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit,</p>
+          <div className="shadowtext">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+          </div>
 
           <div className="recipeCards">
             {recipeData?.recipes?.map((data) => (
@@ -64,7 +66,7 @@ const RecipePart = () => {
                 <div className="timerdiv " id="timeron">
                   <div className="timefork">
                     <img src={"/Assets/Timer.svg"} alt="Timer" />
-                    <p>30 min</p>
+                    <p>30 minutes</p>
                   </div>
                   <div className="timefork">
                     <img src={"/Assets/ForkKnife.svg"} alt="Fork" />

@@ -15,7 +15,7 @@ const BlogPostPageblogs = ({ blogData }) => {
               {blogData?.Author?.lastName}
             </h3>
           </div>
-
+          <div class="vltp"></div>
           <p>{moment(blogData?.createdAt).format("MM MMMM YYYY")}</p>
         </div>
         <p>{blogData?.shortDescription}</p>

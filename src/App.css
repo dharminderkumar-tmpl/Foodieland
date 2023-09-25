@@ -390,7 +390,7 @@ line-height: normal;
   font-style: normal;
   font-weight: 400;
   line-height: 28px;
-  display: contents;
+  display: contents!important;
 }
 
 .herolefttext{
@@ -426,7 +426,7 @@ line-height: normal;
 }
 /* Categories */
 .maincategories{
-  margin-top: 40px;
+  margin-top: 9%;
 }
 .categories{
   display: flex;
@@ -488,9 +488,10 @@ margin-top: 15px;
 .categories button{
   border-radius: 16px;
 background: #E7FAFE;
-padding: 5px 10px 5px 10px;
+padding: 5px 20px 5px 20px;
 margin-right: 5.875rem;
 cursor: pointer;
+border: none;
 }
 
 .categories h1{
@@ -558,9 +559,10 @@ flex-wrap: wrap;
 }
 .recipe{
   padding: 4.2rem;
+  margin-top: 4%;
 }
 #directions{
-  margin-top: 20px;
+  margin-top: 30px;
 }
 .carpet{
   display: flex;
@@ -592,7 +594,7 @@ position: relative;
 flex-basis: 28%;
 height: 370px;
 /* width: 270px; */
-padding: 1.25rem;
+padding: 1rem 0.5rem 1rem 0.5rem;
 text-align: center;
 /* padding: 0; */
 border-radius: 30px;
@@ -713,23 +715,33 @@ letter-spacing: -0.96px;
     line-height: 28px;
 }
 }
-
+.shadowtext{
+  color: rgba(0, 0, 0, 0.60);
+text-align: center;
+text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+font-family: Inter;
+font-size: 16px;
+font-style: normal;
+font-weight: 400;
+line-height: 28px; /* 175% */
+}
 /* End Part */
 
 .recipeCards1 {
   margin: auto;
   display: flex;
   flex-wrap: wrap;
+  margin-top: 25px;
   justify-content: space-around;
   /* border: 1px solid red; */
 }
 .recipetitle1{
   display: flex;
   gap: 22%;
-  justify-content: flex-end;
+  justify-content: center!important;
 }
 .card1{
-flex-basis: 22%;
+flex-basis: 23%;
 margin: 10px 0;
 position: relative;
 /* text-align: center; */
@@ -744,7 +756,7 @@ background:white;
 }
 .recipetitle1 h1{
   color: #000;
-text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+/* text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); */
 font-family: Inter;
 font-size: 48px;
 font-style: normal;
@@ -760,7 +772,7 @@ margin-left: 18px;
   color: rgba(0, 0, 0, 0.60);
   text-align: left;
   padding-top: 63px;
-text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+/* text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); */
 font-family: Inter;
 font-size: 12px;
 font-style: normal;
@@ -776,9 +788,19 @@ font-family: Inter;
 font-size: 18px;
 font-style: normal;
 font-weight: 600;
+margin-top: 15px;
 /* padding: 0 14px 0 14px; ; */
 line-height: 26px; /* 144.444% */
 letter-spacing: -0.72px;
+}
+.timerdiv p{
+  color: rgba(0, 0, 0, 0.60);
+font-family: Inter;
+font-size: 14px;
+font-style: normal;
+font-weight: 500;
+line-height: normal;
+letter-spacing: -0.28px;
 }
 
 @media only screen and (min-width: 200px )and (max-width:767px) {
@@ -809,7 +831,17 @@ letter-spacing: -0.72px;
 .dc{
   display: flex;
   justify-content: center;
-  margin-top: 30px;
+  margin-top: 8%;
+}
+.heading{
+  
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: flex-end;
+    align-content: space-around;
+    align-items: center;
+
 }
 .delicacy-container{
   display: flex;
@@ -853,6 +885,9 @@ letter-spacing: -1.92px;
   font-style: normal;
   font-weight: 400;
   line-height: 28px;
+  display: flex;
+  justify-content: center;
+  width: 45%;
 }
 .delicacy-container .email-container{
   display: flex;
@@ -903,7 +938,7 @@ width: 100%;
 .delicacy-container .email-container .border button{
   border: none;
   outline: none;
-  border-radius: 24px;
+  border-radius: 16px;
   background-color: #000;
   color: #FFF;
   font-size: 1rem;
@@ -936,20 +971,24 @@ width: 100%;
     line-height: normal;
     letter-spacing: -1.92px;
 }
+.vl{
+  border: none!important;
+  margin-top: 20px;
+}
 .heading{
   padding: 20px;
 }
 .sideCard img{
   overflow: hidden;
 }
-.delicacy-container {
+.delicacy-container{
   display: flex;
   flex-direction: column;
   border-radius: 8px;
   background: #E7F9FD;
-  width: 90%;
-  /* padding-inline: 90px; */
-  /* align-items: center; */
+  /* width: 76%;/ */
+  /* padding: 43px; */
+  align-items: center;
   justify-content: center;
   overflow: hidden;
 }
@@ -986,7 +1025,7 @@ width: 100%;
   border-radius: 10px;
   background-color: #000;
   color: #FFF;
-  padding: 10px 24px 10px 24px;
+  padding: 14px 36px 14px 36px;
   cursor: pointer;
   align-self: start;
   
@@ -1045,6 +1084,7 @@ background: linear-gradient(180deg, rgba(231, 249, 253, 0.00) 0%, #E7F9FD 100%);
   font-weight: 400;
   padding-top: 1.5em;
   padding-left: 0.05em;
+  padding-bottom:4rem ;
 }
 
 
@@ -1052,6 +1092,9 @@ background: linear-gradient(180deg, rgba(231, 249, 253, 0.00) 0%, #E7F9FD 100%);
   .chef-main {
     width: 100vw;
     display: flex;
+  }
+  .icon-button1{
+    right: 23px!important;
   }
   .hero-wrapper{
     padding: 20px;
@@ -1111,7 +1154,7 @@ background: linear-gradient(180deg, rgba(231, 249, 253, 0.00) 0%, #E7F9FD 100%);
   background-color: white;
   color: black;
   padding: 20px 0;
-  margin-top: 40px;
+  margin-top: 8%;
   
 }
 
@@ -1155,7 +1198,8 @@ background: linear-gradient(180deg, rgba(231, 249, 253, 0.00) 0%, #E7F9FD 100%);
 }
 .footer-menu ul{
   display: flex;
-  gap: 26px;
+  width: 100%;
+  gap: 90px;
   align-items: flex-end;
 }
 .footer #line{
@@ -1250,7 +1294,7 @@ letter-spacing: -0.36px;
 
   padding: 60px;
   display: flex;
-  margin-top: 5%;
+  margin-top: 3%;
   flex-direction: column;
   /* align-items: center; */
 }
@@ -1499,7 +1543,7 @@ line-height: normal;
 letter-spacing: -0.96px;
 }
 .mingredient{
-  padding: 20px;
+  padding: 30px 0 30px 0;
   list-style-type: circle;
 }
 
@@ -1511,10 +1555,23 @@ font-size: 18px;
 padding: 1rem;
 font-style: normal;
 font-weight: 400;
-margin: 20px;
+margin: 20px 0;
 line-height: normal;
 letter-spacing: -0.36px;
 border-bottom: 1px solid rgba(0, 0, 0, 0.10);;
+}
+.direction-list {
+  list-style-type: none;
+}
+
+.direction-list li::before {
+  content: "";
+  border: 1px solid #000; /* Outline color and thickness */
+  border-radius: 50%; /* Make it a circle */
+  display: inline-block;
+  width: 10px; /* Adjust the width and height for the circle as needed */
+  height: 10px;
+  margin-right: 0.5em; /* Adjust spacing between bullet and text */
 }
 
 .mingredient li::before{
@@ -1597,6 +1654,8 @@ font-style: normal;
 font-weight: 600;
 line-height: 28px; /* 140% */
 letter-spacing: -0.8px;
+
+
 }
 .ingredientsandrecipemaindiv{
   display: flex;
@@ -1669,6 +1728,7 @@ hr{
   width: 95%;
   margin-left: 20px;
   padding: 2rem;
+  margin-top: 8%;
   /* padding-right: 2rem; */
 }
 .recipetitle1 {
@@ -1757,7 +1817,7 @@ hr{
 .blogName{
   display: flex;
     flex-direction: column;
-    margin-top: 5%;
+    margin-top: 8%;
     /* border: 2px solid red; */
   
 }
@@ -1811,10 +1871,10 @@ line-height: 28px; /* 175% */
 .blogName .search-container .border-search-container button{
   border: none;
   outline: none;
-  border-radius: 24px;
+  border-radius: 16px;
   background-color: #000;
   color: #FFF;
-  padding: 10px 24px 10px 24px;
+  padding: 12px 24px 12px 24px;
   cursor: pointer;
 }
 .blogName .search-container {
@@ -1826,13 +1886,14 @@ line-height: 28px; /* 175% */
   display: flex;
   flex-direction: column;
   justify-content: center;
+  margin-top: 2%;
 }
 .mainsectionblogpage {
   display: flex;
   width: 85%;
   justify-content: center;
   margin-left: 77px;
-  margin-top: 37px;
+  margin-top: 66px;
 }
 
 
@@ -1889,6 +1950,7 @@ font-size: 16px;
 font-style: normal;
 font-weight: 400;
 margin-top: 15px;
+margin-bottom: 15px;
 line-height: 28px; /* 175% */
 }
 @media only screen and (min-width: 200px )and (max-width:767px) {
@@ -2036,13 +2098,14 @@ line-height: 28px; /* 175% */
   font-family: poppins;
   /* height: 70vh; */
   padding-bottom: 80px;
+  gap: 2%;
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   /* flex-direction: column; */
 }
 .inputForm h1 {
   display: flex;
-  justify-content: center;
+  /* justify-content: center; */
   color: #000;
 font-family: Inter;
 font-size: 64px;
@@ -2070,14 +2133,28 @@ letter-spacing: -2.56px;
 #firstname {
   display: flex;
   flex-direction: column;
+  width: 100%;
   
 }
 .imagecontact{
   background-image: linear-gradient(to top, #E7F9FD, transparent);
-  border-radius: 25px;
+    border-radius: 25px;
+    height: 474px;
+    overflow: hidden;
+    margin-top: 111px;
 
 }
- b{
+option{
+  color: rgba(0, 0, 0, 0.60);
+  font-family: Inter;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 20px; /* 166.667% */
+  letter-spacing: 0.96px;
+  text-transform: uppercase;
+}
+.samefont{
   color: rgba(0, 0, 0, 0.60);
 font-family: Inter;
 font-size: 12px;
@@ -2086,6 +2163,15 @@ font-weight: 500;
 line-height: 20px; /* 166.667% */
 letter-spacing: 0.96px;
 text-transform: uppercase;
+}
+ b{
+  color: #000;
+font-family: Inter;
+font-size: 16px;
+font-style: normal;
+font-weight: 600;
+line-height: normal;
+letter-spacing: -0.32px;
 }
 #lastname {
   display: flex;
@@ -2097,6 +2183,14 @@ text-transform: uppercase;
   border-radius: 16px;
 border: 1px solid rgba(0, 0, 0, 0.10);
 background: #FFF;
+color: rgba(0, 0, 0, 0.60);
+font-family: Inter;
+font-size: 12px;
+font-style: normal;
+font-weight: 500;
+line-height: 20px; /* 166.667% */
+letter-spacing: 0.96px;
+text-transform: uppercase;
 }
 #fname {
   /* background-color: gray; */
@@ -2128,6 +2222,7 @@ background: #FFF;
 .subject{
   display: flex;
   flex-direction: column;
+  width: 50%;
 }
 #subject{
   padding: 10px;
@@ -2160,6 +2255,7 @@ border: 1px solid rgba(0, 0, 0, 0.10);
 .enquiry{
   display: flex;
   flex-direction: column;
+  width: 50%;
 }
 #message {
   padding: 1rem;
@@ -2171,7 +2267,7 @@ border: 1px solid rgba(0, 0, 0, 0.10);
 }
 .Submitbutton {
   display: flex;
-  justify-content: center;
+  /* justify-content: center; */
   margin-top: 25px;
 }
 .Submitbutton button {
@@ -2183,7 +2279,7 @@ border: 1px solid rgba(0, 0, 0, 0.10);
   color: #FFF;
 text-align: center;
 font-family: Inter;
-/* font-size: 16px; */
+font-size: 12px;
 font-style: normal;
 font-weight: 600;
 line-height: 24px; /* 150% */
@@ -2305,6 +2401,7 @@ line-height: 28px; /* 175% */
  .Qanda .blogans{
 display: flex;
 flex-direction: column;
+margin-left: 10%;
 
 }
 .Qanda {
@@ -2337,7 +2434,7 @@ line-height: 28px; /* 175% */
 .socialmedia{
   display: flex;
   flex-direction: column;
-  margin-top: 10px;
+  margin-top: 46px;
   text-align: center;
   flex: 20% 1;
   /* margin-left: 50px; */
@@ -2365,19 +2462,19 @@ text-transform: uppercase;
 }
 .secondbanner{
   display: flex;
-  
+  margin-top: 30px;
 }
 
 .blogans img {
   width: 100%;
   height: 500px;
   border-radius: 20px;
-  margin-top: 20px;
+  margin-top: 40px;
   object-fit: cover;
 }
 #fork{
   
-    border: 0.3px solid #00000040;
+    /* border: 0.3px solid #00000040; */
     border-radius: 20px;
     box-shadow: 0px 4px 4px 0px #00000040;
     padding: 8px;
@@ -2385,9 +2482,9 @@ text-transform: uppercase;
 }
 .timerdiv{
   display: flex;
-  gap: 10px;
+  gap: 20px;
 /* padding-top: 1rem; */
-margin-top: 8px;
+margin-top: 20px;
   /* justify-content: center; */
 }
 .snack{
@@ -2398,6 +2495,7 @@ font-weight: 500;
 line-height: 17px;
 letter-spacing: -0.02em;
 text-align: left;
+color: rgba(0, 0, 0, 0.60);
 
 }
 #minutefork {
@@ -2418,7 +2516,7 @@ text-align: left;
 .timefork{
   display: flex;
   align-items: center;
-  gap: 5px;
+  gap: 10px;
 }
 .timerdiv img{
   width: 24px !important;
@@ -2470,18 +2568,22 @@ text-align: left;
 
 .search-results {
   margin-top: 20px;
+  display: flex;
+  justify-content: center;
 }
 
 
 .search-result-item {
   list-style: none;
-  margin: 10px 0;
-  padding: 10px;
-  background-color: #f7f7f7;
-  border: 1px solid #ddd;
-  border-radius: 4px;
-  display: flex;
-  align-items: center;
+    margin: 10px 0;
+    padding: 10px;
+    background-color: #f7f7f7;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
 }
 .search-result-link {
   text-decoration: none;
@@ -2504,6 +2606,9 @@ text-align: left;
 .delicacy-container.heading{
   margin-top: 60px;
 }
+.imageauthor{
+  margin-right: 40px;
+}
 
 @media (max-width: 768px) {
 
@@ -2524,19 +2629,19 @@ text-align: left;
   /* width: 20px; */
 }
 .imageauthor img{
-  width: 40px !important;
-  height: 40px !important;
+  width: 50px !important;
+  height: 50px !important;
   border-radius: 50%;
 }
 #icook{
-  width: 24px;
-  height: 24px;
+  width: 24px !important;
+  height: 24px !important;
   border-radius: 50%;
 }
 .imageauthor h5{
   color: #000;
 font-family: Inter;
-font-size: 1rem;
+font-size: 15px;
 font-style: normal;
 font-weight: 700;
 line-height: normal;
@@ -2598,7 +2703,7 @@ letter-spacing: -0.28px;
 }
  .blackbg{
   width: max-content;
-  align-self: center;border-radius: 10px;
+  align-self: center;border-radius: 16px;
   display: flex;
   margin-top: 25px;
   background-color: #000;
@@ -2715,7 +2820,7 @@ line-height: 28px; /* 175% */
 .flexnamedate p{
   color: rgba(0, 0, 0, 0.60);
 font-family: Inter;
-font-size: 13px;
+font-size: 10px;
 font-style: normal;
 font-weight: 500;
 line-height: normal;
@@ -2754,6 +2859,7 @@ letter-spacing: 1.2px;
 .iconinside{
   width: 80px;
   height: 80px;
+  margin-bottom: 10px;
     background-color: #E7FAFE;
     border-radius: 50%;
     align-self: center;
@@ -2770,7 +2876,7 @@ font-style: normal;
 font-weight: 500;
 line-height: normal;
 letter-spacing: -0.28px;
-margin-top: 20px;
+margin-top: 10px;
 }
 .footerundertext{
   width: 100%;
@@ -2794,7 +2900,7 @@ margin-bottom: 20px;
 .icon-button {
   position: absolute; 
   top: 30px; 
-  right: 29px; 
+  right: 34px; 
   border: 0;
   background-color: #fff;
   border-radius: 50%;
@@ -2860,7 +2966,7 @@ margin-bottom: 20px;
   .icon-button1 {
     position: absolute; 
     top: 30px; 
-    right: 31px; 
+    right: 57px; 
     border: 0;
     background-color: #fff;
     border-radius: 50%;
@@ -2919,11 +3025,24 @@ margin-bottom: 20px;
     border-radius: 20px;
   }
 
- #pageno:active{
-  background-color: red;
- }
  #container{
   display: flex;
   justify-content: flex-end;
-  margin-top: 50px;
+  margin-top: 11%;
  }
+ .contactmaindiv{
+  width: 67%;
+ }
+ form{
+  width: 100%;
+ }
+ .titleauthorright{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.vltp{
+  margin-top: 27px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  height: 72px;
+}

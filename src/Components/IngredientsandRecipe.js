@@ -31,23 +31,16 @@ const IngredientsandRecipe = ({ dataFromAPI }) => {
               <div className="rightRecipeDish">
                 <img src={"/Assets/meatballs.png"} alt="salad" />
                 <h2>
-                  Chicken Meatball with Creamy Cheese Chicken Meatball with
-                  Creamy Cheese Chicken Meatball with Creamy Cheese
+                  Chicken Meatball with Creamy Cheese Chicken Meatbatballs
                 </h2>
               </div>
               <div className="rightRecipeDish">
                 <img src={"/Assets/meatballs.png"} alt="salad" />
-                <h2>
-                  The Creamiest Creamy Chicken an The Creamiest Creamy Chicken
-                  an The Creamiest Creamy Chicken an{" "}
-                </h2>
+                <h2>The Creamiest Creamy Chicken an The Creamiest</h2>
               </div>
               <div className="rightRecipeDish">
                 <img src={"/Assets/potChicken.png"} alt="salad" />
-                <h2>
-                  The Best Easy One Pot Chicken and Rice The Best Easy One Pot
-                  Chicken and Rice..The Best Easy One Pot Chicken and Rice..
-                </h2>
+                <h2>The Best Easy One Pot Chicken and Rice.</h2>
               </div>
             </div>
           </div>
