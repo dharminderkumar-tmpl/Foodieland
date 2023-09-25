@@ -33,7 +33,7 @@ function AritcleBlogPage() {
               value={search}
               onChange={(e) => setSearch(e.target.value)}
             />
-            <button onClick={handleSearch}>Submit</button>
+            <button onClick={handleSearch}>Search</button>
           </div>
         </div>
       </div>

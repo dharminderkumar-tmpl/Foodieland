@@ -7,15 +7,15 @@ const RecipeSectionFirst = ({ data }) => {
         <div className="smallericons">
           <div className="icon">
             <div className="iconinside">
-              <img src="/Assets/sharing.png" />
-            </div>
-            <h3>Share</h3>
-          </div>
-          <div className="icon">
-            <div className="iconinside">
               <img src="/Assets/printing.png" />
             </div>
             <h3>Print</h3>
+          </div>
+          <div className="icon">
+            <div className="iconinside">
+              <img src="/Assets/sharing.png" />
+            </div>
+            <h3>Share</h3>
           </div>
         </div>
       </div>
@@ -35,7 +35,7 @@ const RecipeSectionFirst = ({ data }) => {
             <img id="icook" src="/Assets/Timer.svg" />
             <div className="flexnamedate">
               <h5>PREP TIME</h5>
-              <p>15 MIN</p>
+              <p>15 Minutes</p>
             </div>
           </div>
         </div>
@@ -45,7 +45,7 @@ const RecipeSectionFirst = ({ data }) => {
             <img id="icook" src="/Assets/Timer.svg" />
             <div className="flexnamedate">
               <h5>COOK TIME</h5>
-              <p>15 MIN</p>
+              <p>15 Minutes</p>
             </div>
           </div>
         </div>
@@ -75,7 +75,8 @@ const RecipeSectionFirst = ({ data }) => {
               <h4>Fiber</h4> <p>{data?.nutritionInformation?.Fiber}</p>
             </div>
             <div className="nutrient">
-              <h4>Calories</h4> <p> {data?.nutritionInformation?.Calories}</p>
+              <h4>Calories</h4>{" "}
+              <p> {data?.nutritionInformation?.Calories + " KCal"}</p>
             </div>
           </div>
           <div className="recipeText">

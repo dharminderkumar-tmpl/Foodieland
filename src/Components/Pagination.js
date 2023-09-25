@@ -4,6 +4,7 @@ import moment from "moment";
 
 export function PaginatedItems({ totalBlogs, setUsers }) {
   const [blogCards, setBlogCards] = useState([]);
+  //const[black,setblack] = useState();
   const [currentPage, setCurrentPage] = useState(1);
   const recordsPerPage = 6;
   const totalPages = Math.ceil(totalBlogs / recordsPerPage);
@@ -23,9 +24,7 @@ export function PaginatedItems({ totalBlogs, setUsers }) {
         {pageNumbers.map((pageNumber) => (
           <button
             type="button"
-            className={`page-item ${
-              currentPage === pageNumber ? "active" : ""
-            }`}
+            className={`page-item ${currentPage === pageNumber ? "black" : ""}`}
             key={pageNumber}
             onClick={() => {
               window.scrollTo(0, 0);
@@ -73,25 +72,25 @@ export function PaginatedItems({ totalBlogs, setUsers }) {
   return (
     <>
       <div className="pagination">
-        <button
+        {/* <button
           type="button"
           className="page-item"
           onClick={prevPage}
           disabled={currentPage === 1}
         >
           Prev
-        </button>
+        </button> */}
 
         <PageNumber totalPages={totalPages} currentPage={currentPage} />
 
-        <button
+        {/* {/* <button
           type="button"
           className="page-item"
           onClick={nextPage}
           disabled={currentPage === totalPages}
-        >
+        > 
           Next
-        </button>
+        </button> */}
       </div>
     </>
   );

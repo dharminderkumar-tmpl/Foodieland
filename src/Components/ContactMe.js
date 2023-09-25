@@ -21,35 +21,34 @@ function ContactMe() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    
-    
+
     if (validateForm()) {
       try {
-        const response = await fetch('https://cooking-blogs.onrender.com/api/contact-us', {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-          },
-          body: JSON.stringify(formData),
-        });
+        const response = await fetch(
+          "https://cooking-blogs.onrender.com/api/contact-us",
+          {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify(formData),
+          }
+        );
 
         if (response.ok) {
-          
           console.log("Form submitted successfully!");
-          
+
           setFormData({
             fname: "",
-            email: "",
+            emailId: "", // Corrected from "email"
             subject: "",
             message: "",
             enquiry: "",
           });
         } else {
-          
           console.error("Error submitting the form.");
         }
       } catch (error) {
-       
         console.error("Network error:", error);
       }
     }
@@ -58,18 +57,18 @@ function ContactMe() {
   const validateForm = () => {
     const newErrors = {};
 
-   
     if (!formData.fname.trim()) {
       newErrors.fname = "Name is required";
     }
 
-    
     if (!formData.emailId.trim()) {
       newErrors.emailId = "Email is required";
     } else if (
-      !/^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,4}$/.test(formData.email)
+      !/^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,4}$/.test(
+        formData.emailId
+      )
     ) {
-      newErrors.email = "Invalid email address";
+      newErrors.emailId = "Invalid email address"; // Corrected from "email"
     }
 
     if (!formData.message.trim()) {
@@ -88,7 +87,7 @@ function ContactMe() {
           <img src={"/Assets/contactimage.png"} alt="salad" />
         </div>
 
-        <div>
+        <div className="contactmaindiv">
           <h1>Contact us</h1>
           <div className="form">
             <form onSubmit={handleSubmit}>
@@ -96,7 +95,7 @@ function ContactMe() {
                 <div id="firstname">
                   <label htmlFor="fname">
                     {" "}
-                    <b>NAME</b>
+                    <div className="samefont">NAME</div>
                   </label>
                   <input
                     type="text"
@@ -110,14 +109,14 @@ function ContactMe() {
                   {errors.fname && <p className="error">{errors.fname}</p>}
                 </div>
                 <div id="lastname">
-                  <label htmlFor="email">
+                  <label htmlFor="emailId">
                     {" "}
-                    <b>EMAIL ADDRESS </b>
+                    <div className="samefont">EMAIL ADDRESS </div>
                   </label>
                   <input
                     type="email"
-                    name="email"
-                    value={formData.email}
+                    name="emailId"
+                    value={formData.emailId}
                     onChange={handleChange}
                     id="emailId"
                     required
@@ -130,7 +129,7 @@ function ContactMe() {
                 <div className="subject">
                   <label htmlFor="subject">
                     {" "}
-                    <b>SUBJECT</b>
+                    <div className="samefont">SUBJECT</div>
                   </label>
                   <input
                     type="text"
@@ -144,7 +143,7 @@ function ContactMe() {
                 </div>
                 <div className="enquiry">
                   <label htmlFor="enquiry">
-                    <b>ENQUIRY TYPE</b>
+                    <div className="samefont">ENQUIRY TYPE</div>
                   </label>
                   <select
                     id="enquiry"
@@ -165,7 +164,7 @@ function ContactMe() {
               <div id="textmsg">
                 <label htmlFor="message">
                   {" "}
-                  <b>MESSAGES</b>
+                  <div className="samefont">MESSAGES</div>
                 </label>
                 <textarea
                   id="message"
