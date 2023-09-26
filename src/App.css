@@ -200,7 +200,7 @@ padding-left: 20px;
 #homebtn a.active{
   border-bottom:2px solid #000;
 }
-#recipebtn a.active{
+#recipebtn a.focus{
   border-bottom:2px solid #000;
 }
 #blogbtn a.active{
@@ -1095,6 +1095,9 @@ background: linear-gradient(180deg, rgba(231, 249, 253, 0.00) 0%, #E7F9FD 100%);
   .chef-main {
     width: 100vw;
     display: flex;
+  }
+  .contactmaindiv{
+    width: 100%!important;
   }
   .icon-button1{
     right: 23px!important;
