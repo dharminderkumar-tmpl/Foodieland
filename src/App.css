@@ -89,6 +89,7 @@ text-align: left;
 }
 .RecipeRight1{
   align-items: center;
+  margin-top: 6%;
 }
 .insideleftnav{
   margin-left: 0;
@@ -372,12 +373,17 @@ line-height: normal;
 }
 .timerdiv{
   padding: 1rem 0 0 0;
+  justify-content: center;
+  margin-top: 0!important;
 }
 .carpet{
   display: none!important;
 }
 .container{
   padding: 0 !important;
+}#container{
+  justify-content: center!important;
+  margin-top: 8%!important;
 }
 .footerundertext p{
   text-align: center;
@@ -663,6 +669,10 @@ letter-spacing: -0.96px;
         align-items: center;
         padding: 0;
         /* padding-inline: 1rem; */
+    }
+    .card h3{
+      text-align: center !important;
+      font-size: 18px;
     }
     .sharingicons{
       display: none!important;
@@ -2533,11 +2543,15 @@ color: rgba(0, 0, 0, 0.60);
 
 @media only screen and (min-width: 200px )and (max-width:767px){
   .mainBannerPost img{
-    width: 100%;
+    width: 88%;
     max-height: 21rem;
+  }
+  .imageauthor{
+    margin-top: 30px;
   }
   .blogans img{
     margin-left: 15px;
+    height: 400px;
   } 
   .navbar{
     border-bottom: 0;
@@ -2567,7 +2581,7 @@ color: rgba(0, 0, 0, 0.60);
 .social-social {
   
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: center;
 }
 .mainBannerPost h1{
   font-size: 30px;
@@ -2755,7 +2769,7 @@ a{
   align-items: center;
 }
 .mainBannerPost p{
-  padding: 0;
+  padding: 20px;
 }
 .secondbanner{
   flex-direction: column;
