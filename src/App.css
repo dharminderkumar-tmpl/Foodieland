@@ -524,6 +524,7 @@ flex-wrap: wrap;
 }
 .footer-container .footer-text{
   align-items: center;
+  flex-direction: column;
 }
 .chef-container{
   border-radius: 0 !important;
@@ -990,6 +991,7 @@ width: 100%;
 }
 .heading{
   padding: 20px;
+  align-items: flex-start;
 }
 .sideCard img{
   overflow: hidden;
@@ -2303,6 +2305,7 @@ font-style: normal;
 font-weight: 600;
 line-height: 24px; /* 150% */
 letter-spacing: -0.32px;
+cursor: pointer;
 }
 
 @media only screen and (min-width: 200px )and (max-width:767px) {
@@ -2760,6 +2763,9 @@ a{
   .emailformsubmit {
     left: 14%;
     top: 59%;
+}
+.footerundertext{
+  padding: 0 10px 0 10px;
 }
 .badge{
   display: none;

@@ -27,7 +27,7 @@ function Navbar() {
                 <NavLink to={"/"}>Home</NavLink>
               </li>
               <li id="recipebtn">
-                <a href="#recipe">Recipe</a>
+                <a href="/#recipe">Recipe</a>
               </li>
               <li id="blogbtn">
                 <NavLink to={"/Blog"}>Blog</NavLink>

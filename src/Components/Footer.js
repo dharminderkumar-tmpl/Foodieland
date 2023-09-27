@@ -15,7 +15,8 @@ const Footer = () => {
             <div className="footer-menu">
               <ul>
                 <Link to={"/"}>Home</Link>
-                <Link to={"/Recipe"}>Recipe</Link>
+
+                <Link to={"/#recipe"}>Recipe</Link>
                 <Link to={"/Blog"}>Blog</Link>
                 <Link to={"/Contact"}>Contact</Link>
                 {/* <Link to={"/AboutUs"}>About Us</Link> */}
