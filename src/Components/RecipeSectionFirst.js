@@ -29,7 +29,7 @@ const RecipeSectionFirst = ({ data }) => {
             </div>
           </div>
         </div>
-        <div class="vl"></div>
+        <div className="vl"></div>
         <div className="flexalldatarecipe">
           <div className="imageauthor">
             <img id="icook" src="/Assets/Timer.svg" alt="timer" />
@@ -39,7 +39,7 @@ const RecipeSectionFirst = ({ data }) => {
             </div>
           </div>
         </div>
-        <div class="vl"></div>
+        <div className="vl"></div>
         <div className="flexalldatarecipe">
           <div className="imageauthor">
             <img id="icook" src="/Assets/Timer.svg" alt="timer" />
@@ -49,7 +49,7 @@ const RecipeSectionFirst = ({ data }) => {
             </div>
           </div>
         </div>
-        <div class="vl"></div>
+        <div className="vl"></div>
         <div className="flexalldatarecipe">
           <div className="imageauthor">
             <img id="icook" src="/Assets/ForkKnife.svg" alt="timer" />
