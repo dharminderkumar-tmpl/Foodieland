@@ -9,7 +9,7 @@ const BlogPostPageblogs = ({ blogData }) => {
         <h1>{blogData?.title}</h1>
         <div className="postpageauthor">
           <div className="imageauthor">
-            <img src={blogData?.Author?.image} />
+            <img src={blogData?.Author?.image} alt="author"/>
             <h3>
               {blogData?.Author?.firstName + " "}
               {blogData?.Author?.lastName}

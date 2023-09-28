@@ -7,13 +7,13 @@ const RecipeSectionFirst = ({ data }) => {
         <div className="smallericons">
           <div className="icon">
             <div className="iconinside">
-              <img src="/Assets/printing.png" />
+              <img src="/Assets/printing.png" alt="print" />
             </div>
             <h3>Print</h3>
           </div>
           <div className="icon">
             <div className="iconinside">
-              <img src="/Assets/sharing.png" />
+              <img src="/Assets/sharing.png" alt="sharing" />
             </div>
             <h3>Share</h3>
           </div>
@@ -22,7 +22,7 @@ const RecipeSectionFirst = ({ data }) => {
       <div className="mainflexdiv">
         <div className="flexalldatarecipe">
           <div className="imageauthor">
-            <img src="/Assets/man.png" />
+            <img src="/Assets/man.png" alt="man" />
             <div className="flexnamedate">
               <h5>Jan Doe</h5>
               <p>9 Nov 2023</p>
@@ -32,7 +32,7 @@ const RecipeSectionFirst = ({ data }) => {
         <div class="vl"></div>
         <div className="flexalldatarecipe">
           <div className="imageauthor">
-            <img id="icook" src="/Assets/Timer.svg" />
+            <img id="icook" src="/Assets/Timer.svg" alt="timer" />
             <div className="flexnamedate">
               <h5>PREP TIME</h5>
               <p>15 Minutes</p>
@@ -42,7 +42,7 @@ const RecipeSectionFirst = ({ data }) => {
         <div class="vl"></div>
         <div className="flexalldatarecipe">
           <div className="imageauthor">
-            <img id="icook" src="/Assets/Timer.svg" />
+            <img id="icook" src="/Assets/Timer.svg" alt="timer" />
             <div className="flexnamedate">
               <h5>COOK TIME</h5>
               <p>15 Minutes</p>
@@ -52,13 +52,13 @@ const RecipeSectionFirst = ({ data }) => {
         <div class="vl"></div>
         <div className="flexalldatarecipe">
           <div className="imageauthor">
-            <img id="icook" src="/Assets/ForkKnife.svg" />
+            <img id="icook" src="/Assets/ForkKnife.svg" alt="timer" />
             <h5>Chicken</h5>
           </div>
         </div>
       </div>
       <div className="recipemain">
-        <img src={data?.image} className="recipeImg" />
+        <img src={data?.image} className="recipeImg" alt="timer" />
         <div className="nutrientInfo">
           <h3>Nutrition Information</h3>
           <div className="nuts">

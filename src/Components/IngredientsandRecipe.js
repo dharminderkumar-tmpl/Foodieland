@@ -50,7 +50,7 @@ const IngredientsandRecipe = ({ dataFromAPI }) => {
               <h2>Don't forget to eat healthy</h2>
             </div>
             <div className="advertise">
-              <img src="/Assets/advertise.png" />
+              <img src="/Assets/advertise.png" alt="advertise" />
             </div>
             <div className="weblink">www.foodieland.com</div>
           </div>

@@ -34,16 +34,16 @@ const Footer = () => {
               </p>
               <div className="footer-social">
                 <a href="https://www.facebook.com" target="_blank">
-                  <img src={"/Assets/fb.png"} />
+                  <img src={"/Assets/fb.png"} alt="fb"/>
                 </a>
                 <a href="https://www.twitter.com/kakudharmu" target="_blank">
-                  <img src={"/Assets/twitter.png"} />
+                  <img src={"/Assets/twitter.png"} alt="twitter"/>
                 </a>
                 <a
                   href="https://www.instagram.com/_kaku_sharma"
                   target="_blank"
                 >
-                  <img src={"/Assets/instagram.png"} />
+                  <img src={"/Assets/instagram.png"} alt="insta"/>
                 </a>
               </div>
             </div>
