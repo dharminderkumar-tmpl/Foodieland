@@ -14,11 +14,21 @@ const Footer = () => {
             </div>
             <div className="footer-menu">
               <ul>
-                <Link to={"/"}>Home</Link>
+                <li>
+                  <Link to={"/"}>Home</Link>
+                </li>
 
-                <Link to={"/#recipe"}>Recipe</Link>
-                <Link to={"/Blog"}>Blog</Link>
-                <Link to={"/Contact"}>Contact</Link>
+                <li>
+                  <Link to={"/#recipe"}>Recipe</Link>
+                </li>
+                <li>
+                  {" "}
+                  <Link to={"/Blog"}>Blog</Link>
+                </li>
+                <li>
+                  {" "}
+                  <Link to={"/Contact"}>Contact</Link>
+                </li>
                 {/* <Link to={"/AboutUs"}>About Us</Link> */}
               </ul>
             </div>
@@ -34,16 +44,16 @@ const Footer = () => {
               </p>
               <div className="footer-social">
                 <a href="https://www.facebook.com" target="_blank">
-                  <img src={"/Assets/fb.png"} alt="fb"/>
+                  <img src={"/Assets/fb.png"} alt="fb" />
                 </a>
                 <a href="https://www.twitter.com/kakudharmu" target="_blank">
-                  <img src={"/Assets/twitter.png"} alt="twitter"/>
+                  <img src={"/Assets/twitter.png"} alt="twitter" />
                 </a>
                 <a
                   href="https://www.instagram.com/_kaku_sharma"
                   target="_blank"
                 >
-                  <img src={"/Assets/instagram.png"} alt="insta"/>
+                  <img src={"/Assets/instagram.png"} alt="insta" />
                 </a>
               </div>
             </div>
