@@ -29,13 +29,13 @@ const IngredientsandRecipe = ({ dataFromAPI }) => {
             <h1>Other Recipe</h1>
             <div className="rightRecipeDishmain">
               <div className="rightRecipeDish">
-                <img src={"/Assets/meatballs.png"} alt="salad" />
+                <img src={"/Assets/meatballs.webp"} alt="salad" />
                 <h2>
                   Chicken Meatball with Creamy Cheese Chicken Meatbatballs
                 </h2>
               </div>
               <div className="rightRecipeDish">
-                <img src={"/Assets/meatballs.png"} alt="salad" />
+                <img src={"/Assets/meatballs.webp"} alt="salad" />
                 <h2>The Creamiest Creamy Chicken an The Creamiest</h2>
               </div>
               <div className="rightRecipeDish">

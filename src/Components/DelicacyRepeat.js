@@ -16,13 +16,13 @@ const DelicacyRepeat = () => {
           <div className="sideCard">
             <EmailValidation placeholder="Your email address..." />
             <img
-              src={"/Assets/mixedSalad.png"}
+              src={"/Assets/mixedSalad.webp"}
               id="salad"
               alt="baked chicken"
             />
             <img src={"/Assets/flower.png"} id="flower" alt="baked chicken" />
             <img
-              src={"/Assets/Photoplate.png"}
+              src={"/Assets/Photoplate.webp"}
               id="photoplate"
               alt="baked chicken"
             />

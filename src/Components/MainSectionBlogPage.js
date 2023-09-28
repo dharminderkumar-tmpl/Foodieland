@@ -29,7 +29,7 @@ const MainSectionBlogPage = () => {
   const recipeData = [
     {
       id: 1,
-      image: "/Assets/meatballs.png",
+      image: "/Assets/meatballs.webp",
       title: "Chicken Meatball with Creamy Cheese",
       author: "Andeas Smith",
     },
@@ -62,7 +62,7 @@ const MainSectionBlogPage = () => {
                   <p>{item?.shortDescription}</p>
                   <div className="createdate">
                     <div className="imageauthor">
-                      <img src={item?.Author?.image} alt="img"/>
+                      <img src={item?.Author?.image} alt="img" />
                       <h5>
                         {item?.Author?.firstName + " "}
                         {item?.Author?.lastName}
