@@ -52,7 +52,7 @@ const Hero = () => {
                   <div className="imageauthor">
                     <img src="/Assets/man.png" alt="Author" />
                     <div className="flexnamedate">
-                      <h5>Jan Doe</h5>
+                      <h2>Jan Doe</h2>
                       <p>9 Nov 2023</p>
                     </div>
                   </div>

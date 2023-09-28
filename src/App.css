@@ -1295,7 +1295,7 @@ line-height: normal;
 letter-spacing: -0.36px;
 }
 .footer-text span{
-  color: #FF7967;
+  color: #B30A0A;
 font-family: lobster;
 font-size: 18px;
 font-style: normal;
@@ -2880,7 +2880,15 @@ line-height: normal;
 margin-top: 0 !important;
 letter-spacing: -0.28px;
 }
-
+.flexnamedate h2{
+  color: #000;
+font-family: Inter;
+font-size: 15px;
+font-style: normal;
+font-weight: 700;
+line-height: normal;
+letter-spacing: -0.32px;
+}
 .sharingicons{
   display: flex;
   justify-content: flex-end;

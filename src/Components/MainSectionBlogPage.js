@@ -68,7 +68,7 @@ const MainSectionBlogPage = () => {
                         {item?.Author?.lastName}
                       </h5>
                     </div>
-                    <div class="vl"></div>
+                    <div className="vl"></div>
                     <div className="published">
                       <p>
                         {" "}
