@@ -4,42 +4,42 @@ const dummyData = [
   {
     id: 1,
     title: "Healthy Japanese Fried Rice with Asparagus",
-    image: "/Assets/vegSalad.png",
+    image: "/Assets/vegSalad.webp",
   },
   {
     id: 2,
     title: "Healthy Japanese Fried Rice with Asparagus",
-    image: "/Assets/beef.png",
+    image: "/Assets/beef.webp",
   },
   {
     id: 3,
     title: "Healthy Japanese Fried Rice with Asparagus",
-    image: "/Assets/beef.png",
+    image: "/Assets/beef.webp",
   },
   {
     id: 4,
     title: "Healthy Japanese Fried Rice with Asparagus",
-    image: "/Assets/beef.png",
+    image: "/Assets/beef.webp",
   },
   {
     id: 5,
     title: "Healthy Japanese Fried Rice with Asparagus",
-    image: "/Assets/beef.png",
+    image: "/Assets/beef.webp",
   },
   {
     id: 6,
     title: "Healthy Japanese Fried Rice with Asparagus",
-    image: "/Assets/beef.png",
+    image: "/Assets/beef.webp",
   },
   {
     id: 7,
     title: "Healthy Japanese Fried Rice with Asparagus",
-    image: "/Assets/beef.png",
+    image: "/Assets/beef.webp",
   },
   {
     id: 8,
     title: "Healthy Japanese Fried Rice with Asparagus",
-    image: "/Assets/beef.png",
+    image: "/Assets/beef.webp",
   },
 ];
 

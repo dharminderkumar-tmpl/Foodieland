@@ -84,7 +84,7 @@ function ContactMe() {
     <>
       <div className="inputForm">
         <div className="imagecontact">
-          <img src={"/Assets/contactimage.png"} alt="salad" />
+          <img src={"/Assets/contactimage.webp"} alt="salad" />
         </div>
 
         <div className="contactmaindiv">
