@@ -16,7 +16,7 @@ function Navbar() {
         <div className="insideleftnav">
           <div className="leftSide">
             <Link to={"/"}>
-              <img src={"/Assets/logo.png"} alt="Logo" />
+              <img src={"/Assets/logo.webp"} alt="Logo" />
             </Link>
           </div>
         </div>
