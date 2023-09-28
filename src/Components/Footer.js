@@ -10,7 +10,7 @@ const Footer = () => {
         <div className="container">
           <div className="footer-content">
             <div className="footer-logo">
-              <img src={"/Assets/logo.png"} alt="Foodie Logo" />
+              <img src={"/Assets/logo.webp"} alt="Foodie Logo" />
             </div>
             <div className="footer-menu">
               <ul>

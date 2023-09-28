@@ -28,7 +28,7 @@ const Hero = () => {
                 <div>Hot recipes</div>
               </div>
               <div className="badge">
-                <img src={"/Assets/badge.png"} alt="badge" />
+                <img src={"/Assets/Badge.webp"} alt="badge" />
               </div>
               <div className="herotext">
                 <h1>Spicy delicious chicken wings</h1>
