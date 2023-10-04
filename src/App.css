@@ -122,7 +122,7 @@ text-align: left;
 .card img{
   /* width: 87%!important; */
   max-height: 191px !important;
-  width: 90%!important;
+  width: 100%!important;
 }
 
 .sidebar{
@@ -1136,7 +1136,7 @@ background: linear-gradient(180deg, rgba(231, 249, 253, 0.00) 0%, #E7F9FD 100%);
     width: 100%!important;
   }
   .icon-button1{
-    right: 23px!important;
+    right: 11px!important;
   }
   .hero-wrapper{
     padding: 20px;
@@ -1520,10 +1520,47 @@ line-height: 28px; /* 175% */
     border-radius: 25px;
     /* border: 1px solid red; */
 }
+.icon-button{
+  top: 25px!important;
+    right: 19px!important;
+}
+.icon-button1{
+  top: 27px!important;
+    right: 10px!important;
+}
+.mainflexdiv{
+  gap: 0 !important;
+}
+.recipemain{
+  display: flex;
+  flex-direction: column;
+  margin-top: 95px;
+  max-height: 45rem!important;
+}
+.RecipeRight{
+  display: none!important;
+}
 .badge {
  
   top: 36% !important;
   
+}
+
+
+.mainsectionblogpage{
+  flex-direction: column;
+}
+.vl{
+  border: none!important;
+}
+.mainsectionblogs a{
+  flex-direction: column;
+}
+.recipeImg{
+  width: 100% !important;
+}
+.recipeundertext p{
+  margin-top: 90px !important;
 }
 .hero-container{
   margin: 10px 23px;
@@ -1784,6 +1821,10 @@ hr{
   }
   .createdate {
     gap: 15%!important;
+  }
+  .icon-button{
+    top: 17px !important;
+    right: 30px !important;
   }
   .rightRecipeDish h2{
     display: -webkit-box;
@@ -2775,13 +2816,19 @@ a{
    
 }
 .createdate{
-  flex-direction: column;
+  /* flex-direction: column; */
+  justify-content: space-between;
 }
 /* #flower{
   display: none;
 } */
 
-
+#container{
+  justify-content: center!important;
+}
+.social-social{
+  align-items: center;
+}
 }
 @media only screen and (min-width: 200px )and (max-width:767px){
   .emailformsubmit {
