@@ -1,10 +1,9 @@
 import React, { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
-import moment from "moment";
+
 
 export function PaginatedItems({ totalBlogs, setUsers }) {
   const [blogCards, setBlogCards] = useState([]);
-  //const[black,setblack] = useState();
+
   const [currentPage, setCurrentPage] = useState(1);
   const recordsPerPage = 6;
   const totalPages = Math.ceil(totalBlogs / recordsPerPage);
@@ -57,40 +56,25 @@ export function PaginatedItems({ totalBlogs, setUsers }) {
 
   const prevPage = () => {
     window.scrollTo(0, 0);
-    // if (currentPage !== 1) {
+   
     setCurrentPage((prev) => prev - 1);
-    // }
+    
   };
 
   const nextPage = () => {
     window.scrollTo(0, 0);
-    // if (currentPage !== totalPages) {
+  
     setCurrentPage((prev) => prev + 1);
-    // }
+    
   };
 
   return (
     <>
       <div className="pagination">
-        {/* <button
-          type="button"
-          className="page-item"
-          onClick={prevPage}
-          disabled={currentPage === 1}
-        >
-          Prev
-        </button> */}
+       
 
         <PageNumber totalPages={totalPages} currentPage={currentPage} />
 
-        {/* {/* <button
-          type="button"
-          className="page-item"
-          onClick={nextPage}
-          disabled={currentPage === totalPages}
-        > 
-          Next
-        </button> */}
       </div>
     </>
   );
