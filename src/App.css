@@ -443,6 +443,7 @@ line-height: normal;
 }
 .catImg {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   gap: 7%;
   margin-top: 2.5rem;
@@ -1093,7 +1094,7 @@ background: linear-gradient(180deg, rgba(231, 249, 253, 0.00) 0%, #E7F9FD 100%);
   display: flex;
   width: 93%;
   margin-left: 32px;
-  border-radius: 3rem;
+  /* border-radius: 3rem; */
   overflow: hidden;
 }
 /* .rightHeroPage img {
@@ -2614,8 +2615,15 @@ color: rgba(0, 0, 0, 0.60);
     width: 88%;
     max-height: 21rem;
   }
+  .delicacy-container .email-container .border button{
+    font-size: 0.55rem;
+    padding: 1rem 0.5rem;
+  }
   .imageauthor{
     margin-top: 30px;
+  }
+  .footer-menu li, .footer-social li{
+    margin-right: 0!important;
   }
   .blogans img{
     margin-left: 15px;
