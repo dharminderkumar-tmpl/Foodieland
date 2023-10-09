@@ -1841,7 +1841,8 @@ hr{
 @media only screen and (min-width: 200px )and (max-width:767px){
   .recipetitle1{
     display: flex;
-    width: 96%;
+    width: 100%;
+    align-items: center;
     flex-direction: column;
   }
   .mainsectionblogs .imageblog img{
