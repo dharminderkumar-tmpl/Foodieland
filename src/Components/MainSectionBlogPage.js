@@ -50,7 +50,7 @@ const MainSectionBlogPage = () => {
   return (
     <div>
       <div className="mainsectionblogpage">
-        <div>
+        <div className="insideblognamepage">
           {users?.map((item) => (
             <div className="mainsectionblogs" key={item?.id}>
               <Link to={`/BlogPostPage/${item?.id}`}>
@@ -80,9 +80,6 @@ const MainSectionBlogPage = () => {
               </Link>
             </div>
           ))}
-          <div id="container">
-            <PaginatedItems totalBlogs={totalBlogs} setUsers={setUsers} />
-          </div>
         </div>
         <div className="RecipeRight1">
           <h1>Tasty Recipes</h1>
@@ -90,6 +87,7 @@ const MainSectionBlogPage = () => {
             {recipeData.map((recipe) => (
               <div className="rightRecipeDish" key={recipe.id}>
                 <img src={recipe.image} alt={recipe.title} />
+
                 <div className="titleauthorright">
                   <h2>{recipe.title}</h2>
                   <p> By {recipe.author}</p>
@@ -98,6 +96,9 @@ const MainSectionBlogPage = () => {
             ))}
           </div>
         </div>
+      </div>
+      <div id="container">
+        <PaginatedItems totalBlogs={totalBlogs} setUsers={setUsers} />
       </div>
     </div>
   );
