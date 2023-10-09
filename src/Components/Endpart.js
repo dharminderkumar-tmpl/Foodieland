@@ -95,7 +95,7 @@ const Endpart = () => {
               </svg>
             </button>
             <p className="card_name1">{data.title}</p>
-            <div className="timerdiv">
+            <div className="timerdiv23">
               <div className="timer timefork">
                 <img src="/Assets/Timer.svg" alt="Timer" />
                 <p>30 min</p>
